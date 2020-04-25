@@ -1,5 +1,18 @@
 @extends('PublicPage.master')
 @section('section-contents')
+<style>
+.thumb {
+    width: 937.33px;
+    height: 713.72px;
+    background-color: #3e3e3e;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    object-fit: cover;
+}
+/* fit hình ảnh tự động fit theo heigh width của thẻ */
+</style>
 <div class="section-contents">
 
     @include('PublicPage.SubPage.features')<!-- /.features -->
@@ -8,77 +21,50 @@
     <section class="collection collection-03">
 
       <div class="collection-top">
+        <?php
+            $num =1;
+        ?>
+        @foreach ($shoes as $Shoes)
+        @if ($num%2 !=0)
         <div class="item">
-          <div class="col-sm-6">
-            <div class="item-thumbnail"><img class="img-responsive" src="fontend/images/home06/1.jpg" alt="Item Thumbnail"></div><!-- /.item-thumbnail -->
-          </div>
+            <div class="col-sm-6">
+              <div class="item-thumbnail "><img class="img-responsive thumb" src="upload/air-max-2090-shoe-white-3.jpg" alt="Item Thumbnail"></div><!-- /.item-thumbnail -->
+            </div>
+  
+            <div class="col-sm-6">
+              <div class="item-details">
+                <h2 class="item-no">0{{$num}}.</h2><!-- /.item-no -->
+                <h3 class="item-title">{{$Shoes->name}}</h3><!-- /.item-title -->
+                <p class="description">
+                  {{$Shoes->product}}
+                </p><!-- /.description -->
+                <a href="#" class="btn">Start shopping now</a><!-- /.btn -->
+                <div class="item-price"><span class="currency"></span><span class="price">{{number_format($Shoes->price,0, ",",".")}}</span> vnd</div><!-- /.item-price -->
+              </div><!-- /.item-details -->
+            </div>
+          </div><!-- /.item -->
+          @else
+          <div class="item">
+            <div class="col-sm-6">
+              <div class="item-details">
+                <h2 class="item-no">0{{$num}}.</h2><!-- /.item-no -->
+                <h3 class="item-title">{{$Shoes->name}}</h3><!-- /.item-title -->
+                <p class="description">
+                    {{$Shoes->product}}
+                </p><!-- /.description -->
+                <a href="#" class="btn">Start shopping now</a><!-- /.btn -->
+                <div class="item-price"><span class="currency"></span><span class="price">{{number_format($Shoes->price,0, ",",".")}}</span> vnd</div><!-- /.item-price -->
+              </div><!-- /.item-details -->
+            </div>
 
-          <div class="col-sm-6">
-            <div class="item-details">
-              <h2 class="item-no">01.</h2><!-- /.item-no -->
-              <h3 class="item-title">Blue sharkskin</h3><!-- /.item-title -->
-              <p class="description">
-                That afternoon I had been worrying my brokers about investments to give my mind something to work on, and on my way home
-              </p><!-- /.description -->
-              <a href="#" class="btn">Start shopping now</a><!-- /.btn -->
-              <div class="item-price"><span class="currency">$</span><span class="price">454.00</span></div><!-- /.item-price -->
-            </div><!-- /.item-details -->
-          </div>
-        </div><!-- /.item -->
-
-        <div class="item">
-          <div class="col-sm-6">
-            <div class="item-details">
-              <h2 class="item-no">02.</h2><!-- /.item-no -->
-              <h3 class="item-title">Navy slim survival</h3><!-- /.item-title -->
-              <p class="description">
-                I had a long drink, and read the evening papers. They were full of the row in the Near East, and there was an article about Karolides
-              </p><!-- /.description -->
-              <a href="#" class="btn">Start shopping now</a><!-- /.btn -->
-              <div class="item-price"><span class="currency">$</span><span class="price">454.00</span></div><!-- /.item-price -->
-            </div><!-- /.item-details -->
-          </div>
-
-          <div class="col-sm-6">
-            <div class="item-thumbnail"><img class="img-responsive" src="fontend/images/home06/2.jpg" alt="Item Thumbnail"></div><!-- /.item-thumbnail -->
-          </div>
-        </div><!-- /.item -->
-
-        <div class="item">
-          <div class="col-sm-6">
-            <div class="item-thumbnail"><img class="img-responsive" src="fontend/images/home06/3.jpg" alt="Item Thumbnail"></div><!-- /.item-thumbnail -->
-          </div>
-
-          <div class="col-sm-6">
-            <div class="item-details">
-              <h2 class="item-no">03.</h2><!-- /.item-no -->
-              <h3 class="item-title">Cole blue sharkskin</h3><!-- /.item-title -->
-              <p class="description">
-                About six o'clock I went home, dressed, dined at the Cafe Royal, and turned into a music-hall. It was a silly show
-              </p><!-- /.description -->
-              <a href="#" class="btn">Start shopping now</a><!-- /.btn -->
-              <div class="item-price"><span class="currency">$</span><span class="price">454.00</span></div><!-- /.item-price -->
-            </div><!-- /.item-details -->
-          </div>
-        </div><!-- /.item -->
-
-        <div class="item">
-          <div class="col-sm-6">
-            <div class="item-details">
-              <h2 class="item-no">04.</h2><!-- /.item-no -->
-              <h3 class="item-title">Blue extreme slim</h3><!-- /.item-title -->
-              <p class="description">
-                The night was fine and clear as I walked back to the flat I had hired near Portland Place. The crowd surged past me on the pavements
-              </p><!-- /.description -->
-              <a href="#" class="btn">Start shopping now</a><!-- /.btn -->
-              <div class="item-price"><span class="currency">$</span><span class="price">454.00</span></div><!-- /.item-price -->
-            </div><!-- /.item-details -->
-          </div>
-
-          <div class="col-sm-6">
-            <div class="item-thumbnail"><img class="img-responsive" src="fontend/images/home06/4.jpg" alt="Item Thumbnail"></div><!-- /.item-thumbnail -->
-          </div>
-        </div><!-- /.item -->
+            <div class="col-sm-6">
+              <div class="item-thumbnail"><img class="img-responsive" src="fontend/images/home06/2.jpg" alt="Item Thumbnail"></div><!-- /.item-thumbnail -->
+            </div>
+          </div><!-- /.item -->
+        @endif
+        <?php $num++; ?>
+        @endforeach
+  
       </div><!-- /.collection-top -->
 
       <div class="collection-middle">
