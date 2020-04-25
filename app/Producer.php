@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Producer extends Model
 {
-    protected $table = 'Product';
+    protected $table = 'Producer';
 
     public function category(){
         return $this->hasMany('App\Category','id_producer','id');
