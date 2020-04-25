@@ -43,7 +43,7 @@
 
 
 
-  @include('PublicPage.SubPage.contents')
+  @yield('section-contents')
   <!-- /.section-contents -->
 
 

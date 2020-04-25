@@ -8,6 +8,6 @@ class PublicController extends Controller
 {
     public function index()
     {
-        return view('PublicPage/master');
+        return view('PublicPage.SubPage.contents');
     }
 }

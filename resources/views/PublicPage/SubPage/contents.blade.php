@@ -1,3 +1,5 @@
+@extends('PublicPage.master')
+@section('section-contents')
 <div class="section-contents">
 
     @include('PublicPage.SubPage.features')<!-- /.features -->
@@ -168,3 +170,4 @@
     </section><!-- /.collection -->
 
   </div>
+  @endsection
