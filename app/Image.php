@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Image extends Model
 {
-    protected $table = 'Image';
+    protected $table = 'image';
 
     public function shoes(){
         return $this->belongsTo('App\Shoes','id_shoes','id');

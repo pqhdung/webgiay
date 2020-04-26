@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Size extends Model
 {
-    protected $table = 'Size';
+    protected $table = 'size';
 
     public function shoes(){
         return $this->belongsTo('App\Shoes','id_shoes','id');

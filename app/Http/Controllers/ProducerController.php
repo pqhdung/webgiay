@@ -16,6 +16,6 @@ class ProducerController extends Controller
     {
         $producer = Producer::select('id','name_producer')->get();
         $shoes    = Shoes::select('id','name','product','price')->get();
-        return view('PublicPage.SubPage.producer',['producer'=>$producer,'shoes'=>$shoes]);
+        return view('PublicPage.SubShowAll.producer',['producer'=>$producer,'shoes'=>$shoes]);
     }
 }

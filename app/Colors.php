@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Colors extends Model
 {
-    protected $table = 'Colors';
+    protected $table = 'colors';
 
     public function shoes(){
         return $this->belongsTo('App\Shoes','id_shoes','id');
