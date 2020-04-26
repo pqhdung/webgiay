@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-    protected $table = 'Category';
+    protected $table = 'category';
 
     public function producer(){
         return $this->belongsTo('App\Producer','id_producer','id');
