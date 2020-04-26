@@ -18,3 +18,5 @@ Route::get('/', 'PublicController@index');
 Route::get('/thanhvien.html', function(){
 	return view('thanhvien');
 });
+
+Route::get('/producer.html', 'ProducerController@getAllProducer');
