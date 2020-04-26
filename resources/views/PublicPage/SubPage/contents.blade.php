@@ -28,9 +28,8 @@
         @if ($num%2 !=0)
         <div class="item">
             <div class="col-sm-6">
-              <div class="item-thumbnail "><img class="img-responsive thumb" src="upload/air-max-2090-shoe-white-3.jpg" alt="Item Thumbnail"></div><!-- /.item-thumbnail -->
+              <div class="item-thumbnail "><img class="img-responsive thumb" src="upload/{{$Shoes->images}}" alt="Item Thumbnail"></div><!-- /.item-thumbnail -->
             </div>
-  
             <div class="col-sm-6">
               <div class="item-details">
                 <h2 class="item-no">0{{$num}}.</h2><!-- /.item-no -->
@@ -52,13 +51,13 @@
                 <p class="description">
                     {{$Shoes->product}}
                 </p><!-- /.description -->
-                <a href="#" class="btn">Start shopping now5555555555hhhhhhhhh</a><!-- /.btn -->
+                <a href="#" class="btn">Start shopping now</a><!-- /.btn -->
                 <div class="item-price"><span class="currency"></span><span class="price">{{number_format($Shoes->price,0, ",",".")}}</span> vnd</div><!-- /.item-price -->
               </div><!-- /.item-details -->
             </div>
 
             <div class="col-sm-6">
-              <div class="item-thumbnail"><img class="img-responsive" src="fontend/images/home06/2.jpg" alt="Item Thumbnail"></div><!-- /.item-thumbnail -->
+              <div class="item-thumbnail"><img class="img-responsive" src="upload/{{$Shoes->images}}" alt="Item Thumbnail"></div><!-- /.item-thumbnail -->
             </div>
           </div><!-- /.item -->
         @endif
