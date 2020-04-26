@@ -17,10 +17,8 @@ Route::get('/', 'PublicController@index');
 
 Route::get('/thanhvien.html', function(){
 	return view('thanhvien');
-<<<<<<< Updated upstream
-});
-=======
+
 });
 
 Route::get('/producer.html', 'ProducerController@showAllProducer');
->>>>>>> Stashed changes
+
