@@ -26,181 +26,650 @@
   </div><!-- /.section-padding -->
 </section><!-- /.page-name-sec -->
 
-<section class="portfolio text-center">
+<section class="shop-contents">
   <div class="section-padding">
-    <ul class="filter">
-      <li><a class="active" href="#" data-filter="*">All</a></li>
-      <li><a href="#" data-filter=".cat-1">Branding</a></li>
-      <li><a href="#" data-filter=".cat-2">WebDesign</a></li>
-      <li><a href="#" data-filter=".cat-3">Photography</a></li>
-    </ul>
+    <div class="container">
 
-    <div class="portfolio-works grid-4column-02">
-      <div class="item col-sm-3 cat-2">
-        <img src="fontend/images/portfolio/02/1.jpg" alt="portfolio">
-        <div class="item-details">
-          <div class="item-texts">
-            <h3 class="item-title"><a href="#">Project title</a></h3><!-- /.item-title -->
-            <p class="category">Video </p>
-          </div><!-- /.item-texts -->
-        </div><!-- /.item-details -->
-      </div><!--/.item-->
+      <div class="product-filter">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="filter-view">
+              <ul role="tablist">
+                <li class="grid-view active" id="grid-top"><a href="#grid" role="tab" data-toggle="tab"><i class="fa fa-th-large"></i></a></li>
+                <li id="list-top" class="list-view"><a href="#list" role="tab" data-toggle="tab"><i class="fa fa-th-list"></i></a></li>
+              </ul>
+            </div><!-- /.filter-view -->
 
-      <div class="item col-sm-3 cat-3">
-        <img src="fontend/images/portfolio/02/2.jpg" alt="portfolio">
-        <div class="item-details">
-          <div class="item-texts">
-            <h3 class="item-title"><a href="#">Project title</a></h3><!-- /.item-title -->
-            <p class="category">Video </p>
-          </div><!-- /.item-texts -->
-        </div><!-- /.item-details -->
-      </div><!--/.item-->
+            <div class="category-select">
+              <select data-select-like-alignement="never" class="category drop-select">
+                <option value="">Sort by</option>
+                <option value="2">Name</option>
+                <option value="3">Size</option>
+                <option value="4">Color</option>
+                <option value="5">Brand</option>
+              </select>
+            </div><!-- /.category-select -->
 
-      <div class="item col-sm-3 cat-2">
-        <img src="fontend/images/portfolio/02/3.jpg" alt="portfolio">
-        <div class="item-details">
-          <div class="item-texts">
-            <h3 class="item-title"><a href="#">Project title</a></h3><!-- /.item-title -->
-            <p class="category">Video </p>
-          </div><!-- /.item-texts -->
-        </div><!-- /.item-details -->
-      </div><!--/.item-->
+            <span class="filter-text">Showing 1-9 of 36 Products</span>
+          </div>
 
-      <div class="item col-sm-3 cat-2">
-        <img src="fontend/images/portfolio/02/13.jpg" alt="portfolio">
-        <div class="item-details">
-          <div class="item-texts">
-            <h3 class="item-title"><a href="#">Project title</a></h3><!-- /.item-title -->
-            <p class="category">Video </p>
-          </div><!-- /.item-texts -->
-        </div><!-- /.item-details -->
-      </div><!--/.item-->            
+          <div class="col-md-6 text-right">
+            <div class="show-item">
+              <select id="by-price" data-select-like-alignement="never" class="by-price drop-select">
+                <option value="">By price</option>
+                <option value="2">50</option>
+                <option value="3">100</option>
+                <option value="4">150</option>
+                <option value="5">200</option>
+              </select>
 
-      <div class="item col-sm-3 cat-1 cat-3">
-        <img src="fontend/images/portfolio/02/4.jpg" alt="portfolio">
-        <div class="item-details">
-          <div class="item-texts">
-            <h3 class="item-title"><a href="#">Project title</a></h3><!-- /.item-title -->
-            <p class="category">Video </p>
-          </div><!-- /.item-texts -->
-        </div><!-- /.item-details -->
-      </div><!--/.item-->
+              <select id="by-size" data-select-like-alignement="never" class="by-size drop-select">
+                <option value="">By price</option>
+                <option value="2">SM</option>
+                <option value="3">M</option>
+                <option value="4">L</option>
+                <option value="5">XL</option>
+                <option value="6">XXL</option>
+              </select>
 
-      <div class="item col-sm-3 cat-1 cat-2">
-        <img src="fontend/images/portfolio/02/5.jpg" alt="portfolio">
-        <div class="item-details">
-          <div class="item-texts">
-            <h3 class="item-title"><a href="#">Project title</a></h3><!-- /.item-title -->
-            <p class="category">Video </p>
-          </div><!-- /.item-texts -->
-        </div><!-- /.item-details -->
-      </div><!--/.item-->            
+              <select id="by-color" data-select-like-alignement="never" class="by-color drop-select">
+                <option value="">By price</option>
+                <option value="2">Black</option>
+                <option value="3">White</option>
+                <option value="4">Gray</option>
+                <option value="5">Lime Red</option>
+                <option value="6">Light Blue</option>
+                <option value="7">Yellow</option>
+              </select>
+            </div><!-- /.show-item -->
+          </div><!-- /.col-md-6 -->
+        </div>
+      </div><!-- /.product-filter -->
 
-      <div class="item col-sm-3 cat-1 cat-3">
-        <img src="fontend/images/portfolio/02/6.jpg" alt="portfolio">
-        <div class="item-details">
-          <div class="item-texts">
-            <h3 class="item-title"><a href="#">Project title</a></h3><!-- /.item-title -->
-            <p class="category">Video </p>
-          </div><!-- /.item-texts -->
-        </div><!-- /.item-details -->
-      </div><!--/.item-->
+      <div class="shop-products">
+        <div class="row">
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in text-center" id="grid">
+              <div class="col-sm-3">
+                <div class="item">
+                  <div class="item-thumbnail">
+                    <a class="fancybox" href="fontend/images/home08/featured/1.jpg">
+                      <img src="fontend/images/home08/featured/1.jpg" alt="Item Thumbnail">
+                    </a>
+                  </div><!-- /.item-thumbnail -->
 
-      <div class="item col-sm-3 cat-1 cat-3">
-        <img src="fontend/images/portfolio/02/14.jpg" alt="portfolio">
-        <div class="item-details">
-          <div class="item-texts">
-            <h3 class="item-title"><a href="#">Project title</a></h3><!-- /.item-title -->
-            <p class="category">Video </p>
-          </div><!-- /.item-texts -->
-        </div><!-- /.item-details -->
-      </div><!--/.item-->
+                  <div class="item-content">
+                    <div class="buttons">
+                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
+                      <button class="wish-list"><i class="fa fa-heart"></i></button>
+                    </div><!-- /.buttons -->
+                    <h3 class="item-title"><a href="#">Product name here</a></h3><!-- /.item-title -->
+                    <div class="item-price">
+                      <span class="currency">$</span>
+                      <span class="price">49.00</span>
+                    </div><!-- /.item-price -->
+                    <div class="rating">
+                      <input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/>
+                    </div><!-- /.rating -->
 
-      <div class="item col-sm-3 cat-1 cat-3">
-        <img src="fontend/images/portfolio/02/7.jpg" alt="portfolio">
-        <div class="item-details">
-          <div class="item-texts">
-            <h3 class="item-title"><a href="#">Project title</a></h3><!-- /.item-title -->
-            <p class="category">Video </p>
-          </div><!-- /.item-texts -->
-        </div><!-- /.item-details -->
-      </div><!--/.item-->
+                  </div><!-- /.item-content -->
+                </div><!-- /.item -->
+              </div>
 
-      <div class="item col-sm-3 cat-1 cat-3">
-        <img src="fontend/images/portfolio/02/8.jpg" alt="portfolio">
-        <div class="item-details">
-          <div class="item-texts">
-            <h3 class="item-title"><a href="#">Project title</a></h3><!-- /.item-title -->
-            <p class="category">Video </p>
-          </div><!-- /.item-texts -->
-        </div><!-- /.item-details -->
-      </div><!--/.item-->
+              <div class="col-sm-3">
+                <div class="item">
+                  <div class="item-thumbnail">
+                    <a class="fancybox" href="fontend/images/home08/featured/2.jpg">
+                      <img src="fontend/images/home08/featured/2.jpg" alt="Item Thumbnail">
+                    </a>
+                    <span class="ribbon sale">Sale</span>
+                  </div><!-- /.item-thumbnail -->
 
-      <div class="item col-sm-3 cat-1 cat-2">
-        <img src="fontend/images/portfolio/02/9.jpg" alt="portfolio">
-        <div class="item-details">
-          <div class="item-texts">
-            <h3 class="item-title"><a href="#">Project title</a></h3><!-- /.item-title -->
-            <p class="category">Video </p>
-          </div><!-- /.item-texts -->
-        </div><!-- /.item-details -->
-      </div><!--/.item-->
+                  <div class="item-content">
+                    <div class="buttons">
+                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
+                      <button class="wish-list"><i class="fa fa-heart"></i></button>
+                    </div><!-- /.buttons -->
+                    <h3 class="item-title"><a href="#">Product name here</a></h3><!-- /.item-title -->
+                    <div class="item-price">
+                      <span class="currency">$</span>
+                      <span class="price">49.00</span>
+                    </div><!-- /.item-price -->
+                    <div class="rating">
+                      <input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/>
+                    </div><!-- /.rating -->
 
-      <div class="item col-sm-3 cat-1 cat-3">
-        <img src="fontend/images/portfolio/02/15.jpg" alt="portfolio">
-        <div class="item-details">
-          <div class="item-texts">
-            <h3 class="item-title"><a href="#">Project title</a></h3><!-- /.item-title -->
-            <p class="category">Video </p>
-          </div><!-- /.item-texts -->
-        </div><!-- /.item-details -->
-      </div><!--/.item-->
+                  </div><!-- /.item-content -->
+                </div><!-- /.item -->
+              </div>
 
-      <div class="item col-sm-3 cat-2">
-        <img src="fontend/images/portfolio/02/10.jpg" alt="portfolio">
-        <div class="item-details">
-          <div class="item-texts">
-            <h3 class="item-title"><a href="#">Project title</a></h3><!-- /.item-title -->
-            <p class="category">Video </p>
-          </div><!-- /.item-texts -->
-        </div><!-- /.item-details -->
-      </div><!--/.item-->
+              <div class="col-sm-3">
+                <div class="item">
+                  <div class="item-thumbnail">
+                    <a class="fancybox" href="fontend/images/home08/featured/3.jpg">
+                      <img src="fontend/images/home08/featured/3.jpg" alt="Item Thumbnail">
+                    </a>
+                  </div><!-- /.item-thumbnail -->
 
-      <div class="item col-sm-3 cat-3">
-        <img src="fontend/images/portfolio/02/11.jpg" alt="portfolio">
-        <div class="item-details">
-          <div class="item-texts">
-            <h3 class="item-title"><a href="#">Project title</a></h3><!-- /.item-title -->
-            <p class="category">Video </p>
-          </div><!-- /.item-texts -->
-        </div><!-- /.item-details -->
-      </div><!--/.item-->
+                  <div class="item-content">
+                    <div class="buttons">
+                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
+                      <button class="wish-list"><i class="fa fa-heart"></i></button>
+                    </div><!-- /.buttons -->
+                    <h3 class="item-title"><a href="#">Product name here</a></h3><!-- /.item-title -->
+                    <div class="item-price">
+                      <span class="currency">$</span>
+                      <span class="price">49.00</span>
+                    </div><!-- /.item-price -->
+                    <div class="rating">
+                      <input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/>
+                    </div><!-- /.rating -->
 
-      <div class="item col-sm-3 cat-2">
-        <img src="fontend/images/portfolio/02/12.jpg" alt="portfolio">
-        <div class="item-details">
-          <div class="item-texts">
-            <h3 class="item-title"><a href="#">Project title</a></h3><!-- /.item-title -->
-            <p class="category">Video </p>
-          </div><!-- /.item-texts -->
-        </div><!-- /.item-details -->
-      </div><!--/.item-->
+                  </div><!-- /.item-content -->
+                </div><!-- /.item -->
+              </div>
 
-      <div class="item col-sm-3 cat-2">
-        <img src="fontend/images/portfolio/02/16.jpg" alt="portfolio">
-        <div class="item-details">
-          <div class="item-texts">
-            <h3 class="item-title"><a href="#">Project title</a></h3><!-- /.item-title -->
-            <p class="category">Video </p>
-          </div><!-- /.item-texts -->
-        </div><!-- /.item-details -->
-      </div><!--/.item-->
+              <div class="col-sm-3">
+                <div class="item">
+                  <div class="item-thumbnail">
+                    <a class="fancybox" href="fontend/images/home08/featured/4.jpg">
+                      <img src="fontend/images/home08/featured/4.jpg" alt="Item Thumbnail">
+                    </a>
+                  </div><!-- /.item-thumbnail -->
 
-    </div><!--/.recent-works-->
+                  <div class="item-content">
+                    <div class="buttons">
+                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
+                      <button class="wish-list"><i class="fa fa-heart"></i></button>
+                    </div><!-- /.buttons -->
+                    <h3 class="item-title"><a href="#">Product name here</a></h3><!-- /.item-title -->
+                    <div class="item-price">
+                      <span class="currency">$</span>
+                      <span class="price">49.00</span>
+                    </div><!-- /.item-price -->
+                    <div class="rating">
+                      <input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/>
+                    </div><!-- /.rating -->
 
-    <div class="btn-container">
-      <a href="#" class="btn">Load more</a>
-    </div><!-- /.btn-container -->
-  </div><!-- /.sectioin-padding -->
-</section>
+                  </div><!-- /.item-content -->
+                </div><!-- /.item -->
+              </div>
+
+              <div class="col-sm-3">
+                <div class="item">
+                  <div class="item-thumbnail">
+                    <a class="fancybox" href="fontend/images/home08/featured/5.jpg">
+                      <img src="fontend/images/home08/featured/5.jpg" alt="Item Thumbnail">
+                    </a>
+                  </div><!-- /.item-thumbnail -->
+
+                  <div class="item-content">
+                    <div class="buttons">
+                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
+                      <button class="wish-list"><i class="fa fa-heart"></i></button>
+                    </div><!-- /.buttons -->
+                    <h3 class="item-title"><a href="#">Product name here</a></h3><!-- /.item-title -->
+                    <div class="item-price">
+                      <span class="currency">$</span>
+                      <span class="price">49.00</span>
+                    </div><!-- /.item-price -->
+                    <div class="rating">
+                      <input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/>
+                    </div><!-- /.rating -->
+
+                  </div><!-- /.item-content -->
+                </div><!-- /.item -->
+              </div>
+
+              <div class="col-sm-3">
+                <div class="item">
+                  <div class="item-thumbnail">
+                    <a class="fancybox" href="fontend/images/home08/featured/6.jpg">
+                      <img src="fontend/images/home08/featured/6.jpg" alt="Item Thumbnail">
+                    </a>
+                    <span class="ribbon new">New</span>
+                  </div><!-- /.item-thumbnail -->
+
+                  <div class="item-content">
+                    <div class="buttons">
+                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
+                      <button class="wish-list"><i class="fa fa-heart"></i></button>
+                    </div><!-- /.buttons -->
+                    <h3 class="item-title"><a href="#">Product name here</a></h3><!-- /.item-title -->
+                    <div class="item-price">
+                      <span class="currency">$</span>
+                      <span class="price">49.00</span>
+                    </div><!-- /.item-price -->
+                    <div class="rating">
+                      <input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/>
+                    </div><!-- /.rating -->
+
+                  </div><!-- /.item-content -->
+                </div><!-- /.item -->
+              </div>
+
+              <div class="col-sm-3">
+                <div class="item">
+                  <div class="item-thumbnail">
+                    <a class="fancybox" href="fontend/images/home08/featured/7.jpg">
+                      <img src="fontend/images/home08/featured/7.jpg" alt="Item Thumbnail">
+                    </a>
+                  </div><!-- /.item-thumbnail -->
+
+                  <div class="item-content">
+                    <div class="buttons">
+                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
+                      <button class="wish-list"><i class="fa fa-heart"></i></button>
+                    </div><!-- /.buttons -->
+                    <h3 class="item-title"><a href="#">Product name here</a></h3><!-- /.item-title -->
+                    <div class="item-price">
+                      <span class="currency">$</span>
+                      <span class="price">49.00</span>
+                    </div><!-- /.item-price -->
+                    <div class="rating">
+                      <input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/>
+                    </div><!-- /.rating -->
+
+                  </div><!-- /.item-content -->
+                </div><!-- /.item -->
+              </div>
+
+              <div class="col-sm-3">
+                <div class="item">
+                  <div class="item-thumbnail">
+                    <a class="fancybox" href="fontend/images/home08/featured/8.jpg">
+                      <img src="fontend/images/home08/featured/8.jpg" alt="Item Thumbnail">
+                    </a>
+                    <span class="ribbon sale">Sale</span>
+                  </div><!-- /.item-thumbnail -->
+
+                  <div class="item-content">
+                    <div class="buttons">
+                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
+                      <button class="wish-list"><i class="fa fa-heart"></i></button>
+                    </div><!-- /.buttons -->
+                    <h3 class="item-title"><a href="#">Product name here</a></h3><!-- /.item-title -->
+                    <div class="item-price">
+                      <span class="currency">$</span>
+                      <span class="price">49.00</span>
+                    </div><!-- /.item-price -->
+                    <div class="rating">
+                      <input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/>
+                    </div><!-- /.rating -->
+
+                  </div><!-- /.item-content -->
+                </div><!-- /.item -->
+              </div>
+
+              <div class="col-sm-3">
+                <div class="item">
+                  <div class="item-thumbnail">
+                    <a class="fancybox" href="fontend/images/home08/featured/9.jpg">
+                      <img src="fontend/images/home08/featured/9.jpg" alt="Item Thumbnail">
+                    </a>
+                  </div><!-- /.item-thumbnail -->
+
+                  <div class="item-content">
+                    <div class="buttons">
+                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
+                      <button class="wish-list"><i class="fa fa-heart"></i></button>
+                    </div><!-- /.buttons -->
+                    <h3 class="item-title"><a href="#">Product name here</a></h3><!-- /.item-title -->
+                    <div class="item-price">
+                      <span class="currency">$</span>
+                      <span class="price">49.00</span>
+                    </div><!-- /.item-price -->
+                    <div class="rating">
+                      <input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/>
+                    </div><!-- /.rating -->
+
+                  </div><!-- /.item-content -->
+                </div><!-- /.item -->
+              </div>
+
+              <div class="col-sm-3">
+                <div class="item">
+                  <div class="item-thumbnail">
+                    <a class="fancybox" href="fontend/images/home08/featured/10.jpg">
+                      <img src="fontend/images/home08/featured/10.jpg" alt="Item Thumbnail">
+                    </a>
+                  </div><!-- /.item-thumbnail -->
+
+                  <div class="item-content">
+                    <div class="buttons">
+                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
+                      <button class="wish-list"><i class="fa fa-heart"></i></button>
+                    </div><!-- /.buttons -->
+                    <h3 class="item-title"><a href="#">Product name here</a></h3><!-- /.item-title -->
+                    <div class="item-price">
+                      <span class="currency">$</span>
+                      <span class="price">49.00</span>
+                    </div><!-- /.item-price -->
+                    <div class="rating">
+                      <input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/>
+                    </div><!-- /.rating -->
+
+                  </div><!-- /.item-content -->
+                </div><!-- /.item -->
+              </div>
+
+              <div class="col-sm-3">
+                <div class="item">
+                  <div class="item-thumbnail">
+                    <a class="fancybox" href="fontend/images/home08/featured/11.jpg">
+                      <img src="fontend/images/home08/featured/11.jpg" alt="Item Thumbnail">
+                    </a>
+                  </div><!-- /.item-thumbnail -->
+
+                  <div class="item-content">
+                    <div class="buttons">
+                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
+                      <button class="wish-list"><i class="fa fa-heart"></i></button>
+                    </div><!-- /.buttons -->
+                    <h3 class="item-title"><a href="#">Product name here</a></h3><!-- /.item-title -->
+                    <div class="item-price">
+                      <span class="currency">$</span>
+                      <span class="price">49.00</span>
+                    </div><!-- /.item-price -->
+                    <div class="rating">
+                      <input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/>
+                    </div><!-- /.rating -->
+
+                  </div><!-- /.item-content -->
+                </div><!-- /.item -->
+              </div>
+
+              <div class="col-sm-3">
+                <div class="item">
+                  <div class="item-thumbnail">
+                    <a class="fancybox" href="fontend/images/home08/featured/3.jpg">
+                      <img src="fontend/images/home08/featured/3.jpg" alt="Item Thumbnail">
+                    </a>
+                    <span class="ribbon new">New</span>
+                  </div><!-- /.item-thumbnail -->
+
+                  <div class="item-content">
+                    <div class="buttons">
+                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
+                      <button class="wish-list"><i class="fa fa-heart"></i></button>
+                    </div><!-- /.buttons -->
+                    <h3 class="item-title"><a href="#">Product name here</a></h3><!-- /.item-title -->
+                    <div class="item-price">
+                      <span class="currency">$</span>
+                      <span class="price">49.00</span>
+                    </div><!-- /.item-price -->
+                    <div class="rating">
+                      <input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/>
+                    </div><!-- /.rating -->
+
+                  </div><!-- /.item-content -->
+                </div><!-- /.item -->
+              </div>
+
+            </div><!-- /.tab-pane -->
+
+            <div role="tabpanel" class="tab-pane fade text-left" id="list">
+              <div class="item media">
+                <div class="item-thumbnail media-left">
+                  <img src="fontend/images/home08/featured/1.jpg" alt="Item Thumbnail">
+                </div><!-- /.item-image -->
+
+                <div class="item-content media-body">
+                  <h3 class="item-title"><a href="#">Product Name Here</a></h3><!-- /.item-title -->
+
+                  <div class="item-price">
+                    <div class="current-price"><span class="currency">$</span><span class="price">65</span></div><!-- /.current-price -->
+                  </div><!-- /.item-price -->
+
+                  <p class="description">
+                    Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora 
+                  </p><!-- /.description -->
+
+                  <div class="item-bottom">
+                    <div class="buttons">
+                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
+                      <button class="wish-list"><i class="fa fa-heart"></i></button>
+                      <a class="fancybox" href="fontend/images/home08/featured/1.jpg"><i class="fa fa-search"></i></a>
+                      <button class="compare"><i class="fa fa-exchange"></i></button>
+                    </div><!-- /.buttons -->
+
+                    <div class="rating"><input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/></div><!-- /.rating -->
+
+                  </div><!-- /.item-bottom -->
+                </div><!-- /.item-details -->
+              </div><!-- /.item -->
+
+              <div class="item media">
+                <div class="item-thumbnail media-left">
+                  <img src="fontend/images/home08/featured/2.jpg" alt="Item Thumbnail">
+                  <span class="ribbon sale">Sale</span>
+                </div><!-- /.item-image -->
+
+                <div class="item-content media-body">
+                  <h3 class="item-title"><a href="#">Product Name Here</a></h3><!-- /.item-title -->
+
+                  <div class="item-price">
+                    <div class="current-price"><span class="currency">$</span><span class="price">65</span></div><!-- /.current-price -->
+                    <div class="previous-price"><span class="currency">$</span><span class="price">85</span></div><!-- /.previous-price -->
+                  </div><!-- /.item-price -->
+
+                  <p class="description">
+                    Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora 
+                  </p><!-- /.description -->
+
+                  <div class="item-bottom">
+                    <div class="buttons">
+                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
+                      <button class="wish-list"><i class="fa fa-heart"></i></button>
+                      <a class="fancybox" href="fontend/images/home08/featured/2.jpg"><i class="fa fa-search"></i></a>
+                      <button class="compare"><i class="fa fa-exchange"></i></button>
+                    </div><!-- /.buttons -->
+
+                    <div class="rating"><input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/></div><!-- /.rating -->
+
+                  </div><!-- /.item-bottom -->
+                </div><!-- /.item-content -->
+              </div><!-- /.item -->
+
+              <div class="item media">
+                <div class="item-thumbnail media-left">
+                  <img src="fontend/images/home08/featured/3.jpg" alt="Item Thumbnail">
+                </div><!-- /.item-image -->
+
+                <div class="item-content media-body">
+                  <h3 class="item-title"><a href="#">Product Name Here</a></h3><!-- /.item-title -->
+
+                  <div class="item-price">
+                    <div class="current-price"><span class="currency">$</span><span class="price">65</span></div><!-- /.current-price -->
+                  </div><!-- /.item-price -->
+
+                  <p class="description">
+                    Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora 
+                  </p><!-- /.description -->
+
+                  <div class="item-bottom">
+                    <div class="buttons">
+                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
+                      <button class="wish-list"><i class="fa fa-heart"></i></button>
+                      <a class="fancybox" href="fontend/images/home08/featured/3.jpg"><i class="fa fa-search"></i></a>
+                      <button class="compare"><i class="fa fa-exchange"></i></button>
+                    </div><!-- /.buttons -->
+
+                    <div class="rating"><input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/></div><!-- /.rating -->
+
+                  </div><!-- /.item-bottom -->
+                </div><!-- /.item-content -->
+              </div><!-- /.item -->
+
+              <div class="item media">
+                <div class="item-thumbnail media-left">
+                  <img src="fontend/images/home08/featured/4.jpg" alt="Item Thumbnail">
+                  <span class="ribbon new">new</span>
+                </div><!-- /.item-image -->
+
+                <div class="item-content media-body">
+                  <h3 class="item-title"><a href="#">Product Name Here</a></h3><!-- /.item-title -->
+
+                  <div class="item-price">
+                    <div class="current-price"><span class="currency">$</span><span class="price">65</span></div><!-- /.current-price -->
+                  </div><!-- /.item-price -->
+
+                  <p class="description">
+                    Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora 
+                  </p><!-- /.description -->
+
+                  <div class="item-bottom">
+                    <div class="buttons">
+                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
+                      <button class="wish-list"><i class="fa fa-heart"></i></button>
+                      <a class="fancybox" href="fontend/images/home08/featured/4.jpg"><i class="fa fa-search"></i></a>
+                      <button class="compare"><i class="fa fa-exchange"></i></button>
+                    </div><!-- /.buttons -->
+
+                    <div class="rating"><input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/></div><!-- /.rating -->
+
+                  </div><!-- /.item-bottom -->
+                </div><!-- /.item-content -->
+              </div><!-- /.item -->
+
+              <div class="item media">
+                <div class="item-thumbnail media-left">
+                  <img src="fontend/images/home08/featured/5.jpg" alt="Item Thumbnail">
+                </div><!-- /.item-image -->
+
+                <div class="item-content media-body">
+                  <h3 class="item-title"><a href="#">Product Name Here</a></h3><!-- /.item-title -->
+
+                  <div class="item-price">
+                    <div class="current-price"><span class="currency">$</span><span class="price">65</span></div><!-- /.current-price -->
+                  </div><!-- /.item-price -->
+
+                  <p class="description">
+                    Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora 
+                  </p><!-- /.description -->
+
+                  <div class="item-bottom">
+                    <div class="buttons">
+                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
+                      <button class="wish-list"><i class="fa fa-heart"></i></button>
+                      <a class="fancybox" href="fontend/images/home08/featured/5.jpg"><i class="fa fa-search"></i></a>
+                      <button class="compare"><i class="fa fa-exchange"></i></button>
+                    </div><!-- /.buttons -->
+
+                    <div class="rating"><input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/></div><!-- /.rating -->
+
+                  </div><!-- /.item-bottom -->
+                </div><!-- /.item-content -->
+              </div><!-- /.item -->
+
+              <div class="item media">
+                <div class="item-thumbnail media-left">
+                  <img src="fontend/images/home08/featured/6.jpg" alt="Item Thumbnail">
+                  <span class="ribbon sale">Sale</span>
+                </div><!-- /.item-image -->
+
+                <div class="item-content media-body">
+                  <h3 class="item-title"><a href="#">Product Name Here</a></h3><!-- /.item-title -->
+
+                  <div class="item-price">
+                    <div class="current-price"><span class="currency">$</span><span class="price">65</span></div><!-- /.current-price -->
+                    <div class="previous-price"><span class="currency">$</span><span class="price">85</span></div><!-- /.previous-price -->
+                  </div><!-- /.item-price -->
+
+                  <p class="description">
+                    Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora 
+                  </p><!-- /.description -->
+
+                  <div class="item-bottom">
+                    <div class="buttons">
+                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
+                      <button class="wish-list"><i class="fa fa-heart"></i></button>
+                      <a class="fancybox" href="fontend/images/home08/featured/6.jpg"><i class="fa fa-search"></i></a>
+                      <button class="compare"><i class="fa fa-exchange"></i></button>
+                    </div><!-- /.buttons -->
+
+                    <div class="rating"><input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/></div><!-- /.rating -->
+
+                  </div><!-- /.item-bottom -->
+                </div><!-- /.item-content -->
+              </div><!-- /.item -->
+
+              <div class="item media">
+                <div class="item-thumbnail media-left">
+                  <img src="fontend/images/home08/featured/7.jpg" alt="Item Thumbnail">
+                </div><!-- /.item-image -->
+
+                <div class="item-content media-body">
+                  <h3 class="item-title"><a href="#">Product Name Here</a></h3><!-- /.item-title -->
+
+                  <div class="item-price">
+                    <div class="current-price"><span class="currency">$</span><span class="price">65</span></div><!-- /.current-price -->
+                  </div><!-- /.item-price -->
+
+                  <p class="description">
+                    Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora 
+                  </p><!-- /.description -->
+
+                  <div class="item-bottom">
+                    <div class="buttons">
+                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
+                      <button class="wish-list"><i class="fa fa-heart"></i></button>
+                      <a class="fancybox" href="fontend/images/home08/featured/7.jpg"><i class="fa fa-search"></i></a>
+                      <button class="compare"><i class="fa fa-exchange"></i></button>
+                    </div><!-- /.buttons -->
+
+                    <div class="rating"><input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/></div><!-- /.rating -->
+
+                  </div><!-- /.item-bottom -->
+                </div><!-- /.item-content -->
+              </div><!-- /.item -->
+
+              <div class="item media">
+                <div class="item-thumbnail media-left">
+                  <img src="fontend/images/home08/featured/8.jpg" alt="Item Thumbnail">
+                  <span class="ribbon new">new</span>
+                </div><!-- /.item-image -->
+
+                <div class="item-content media-body">
+                  <h3 class="item-title"><a href="#">Product Name Here</a></h3><!-- /.item-title -->
+
+                  <div class="item-price">
+                    <div class="current-price"><span class="currency">$</span><span class="price">65</span></div><!-- /.current-price -->
+                  </div><!-- /.item-price -->
+
+                  <p class="description">
+                    Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora 
+                  </p><!-- /.description -->
+
+                  <div class="item-bottom">
+                    <div class="buttons">
+                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
+                      <button class="wish-list"><i class="fa fa-heart"></i></button>
+                      <a class="fancybox" href="fontend/images/home08/featured/8.jpg"><i class="fa fa-search"></i></a>
+                      <button class="compare"><i class="fa fa-exchange"></i></button>
+                    </div><!-- /.buttons -->
+
+                    <div class="rating"><input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/></div><!-- /.rating -->
+
+                  </div><!-- /.item-bottom -->
+                </div><!-- /.item-content -->
+              </div><!-- /.item -->
+
+            </div><!-- /.tab-pane -->
+          </div><!-- /.tab-content -->
+        </div><!-- /.row -->
+      </div><!-- /.shop-products -->
+
+      <div class="pagination pagination-02 text-center">
+        <a href="#" class="prev"><i class="ti-angle-double-left"></i></a>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#" class="next"><i class="ti-angle-double-right"></i></a>
+      </div><!-- /.pagination -->
+    </div><!-- /.container -->
+  </div><!-- /.section-padding -->
+</section><!-- /.shop-contents -->
 @endsection

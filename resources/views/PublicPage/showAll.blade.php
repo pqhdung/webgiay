@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="fontend/assets/css/style.css">
   <link rel="stylesheet" href="fontend/assets/css/themes.css">
   <link rel="stylesheet" href="fontend/assets/css/pages/portfolio.css">
+  <link rel="stylesheet" href="fontend/assets/css/shop/shop.css">
 
   <!--[if lte IE 7]><script src="lte-ie7.js"></script><![endif]-->
   <!--[if lt IE 9]><script src="fontend/assets/js/vendor/html5-3.6-respond-1.4.2.min.js"></script><![endif]-->
@@ -60,11 +61,55 @@
   </div>
 
 
-
   <script src="fontend/assets/js/plugins.js"></script>
   <script src="fontend/assets/js/main.js"></script>
+  <script src="fontend/assets/js/jquery-ui.min.js"></script>
+  <script src="fontend/assets/js/bootstrap-rating.min.js"></script>
 
 
+  <script type="text/javascript">
+
+    jQuery(document).ready(function($) {
+      "use strict";
+      jQuery('.rating-tooltip-manual').rating({
+        extendSymbol: function () {
+          var title;
+          $(this).tooltip({
+            container: 'body',
+            placement: 'bottom',
+            trigger: 'manual',
+            title: function () {
+              return title;
+            }
+          });
+          $(this).on('rating.rateenter', function (e, rate) {
+            title = rate;
+            $(this).tooltip('show');
+          })
+          .on('rating.rateleave', function () {
+            $(this).tooltip('hide');
+          });
+        }
+      });
+
+      /*-------- Filter By Price -----------*/
+
+      jQuery( "#slider-range" ).slider({
+        range: true,
+        min: 0,
+        max: 500,
+        values: [ 75, 300 ],
+        slide: function( event, ui ) {
+          $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+        }
+      });
+      jQuery( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+        " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+
+    });
+
+
+  </script>
 
 
 </body>
