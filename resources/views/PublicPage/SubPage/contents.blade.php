@@ -52,7 +52,7 @@
                 <p class="description">
                     {{$Shoes->product}}
                 </p><!-- /.description -->
-                <a href="#" class="btn">Start shopping now</a><!-- /.btn -->
+                <a href="#" class="btn">Start shopping now5555555555hhhhhhhhh</a><!-- /.btn -->
                 <div class="item-price"><span class="currency"></span><span class="price">{{number_format($Shoes->price,0, ",",".")}}</span> vnd</div><!-- /.item-price -->
               </div><!-- /.item-details -->
             </div>
