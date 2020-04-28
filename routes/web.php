@@ -21,4 +21,3 @@ Route::get('/thanhvien.html', function(){
 });
 
 Route::get('/producer.html', 'ProducerController@showAllProducer');
-

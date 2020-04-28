@@ -80,7 +80,7 @@ class RouteServiceProvider extends ServiceProvider
     }
 
     protected function mapAdminRoutes(){
-        Route::prefix('admin')
+        Route::prefix('admins')
             ->namespace('App\Http\Controllers\Admin')
             ->group(base_path('routes/admin.php'));
     }
