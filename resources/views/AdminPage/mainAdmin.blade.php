@@ -9,14 +9,17 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
         <!-- App favicon -->
-        <link rel="shortcut icon" href="backend/assets/images/favicon.ico">
+        <link rel="shortcut icon" href="../backend/assets/images/favicon.ico">
+
+         <!-- Bootstrap fileupload css -->
+         <link href="../backend/plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" />
 
         <!-- App css -->
-        <link href="backend/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="backend/assets/css/icons.css" rel="stylesheet" type="text/css" />
-        <link href="backend/assets/css/style.css" rel="stylesheet" type="text/css" />
+        <link href="../backend/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="../backend/assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="../backend/assets/css/style.css" rel="stylesheet" type="text/css" />
 
-        <script src="backend/assets/js/modernizr.min.js"></script>
+        <script src="../backend/assets/js/modernizr.min.js"></script>
 
     </head>
 
@@ -46,26 +49,28 @@
 
 
         <!-- jQuery  -->
-        <script src="backend/assets/js/jquery.min.js"></script>
-        <script src="backend/assets/js/popper.min.js"></script>
-        <script src="backend/assets/js/bootstrap.min.js"></script>
-        <script src="backend/assets/js/waves.js"></script>
-        <script src="backend/assets/js/jquery.slimscroll.js"></script>
+        <script src="../backend/assets/js/jquery.min.js"></script>
+        <script src="../backend/assets/js/popper.min.js"></script>
+        <script src="../backend/assets/js/bootstrap.min.js"></script>
+        <script src="../backend/assets/js/waves.js"></script>
+        <script src="../backend/assets/js/jquery.slimscroll.js"></script>
 
         <!-- Counter number -->
-        <script src="backend/plugins/waypoints/lib/jquery.waypoints.min.js"></script>
-        <script src="backend/plugins/counterup/jquery.counterup.min.js"></script>
+        <script src="../backend/plugins/waypoints/lib/jquery.waypoints.min.js"></script>
+        <script src="../backend/plugins/counterup/jquery.counterup.min.js"></script>
 
         <!-- Chart JS -->
-        <script src="backend/plugins/chart.js/chart.bundle.js"></script>
+        <script src="../backend/plugins/chart.js/chart.bundle.js"></script>
 
         <!-- init dashboard -->
-        <script src="backend/assets/pages/jquery.dashboard.init.js"></script>
+        <script src="../backend/assets/pages/jquery.dashboard.init.js"></script>
 
 
         <!-- App js -->
-        <script src="backend/assets/js/jquery.core.js"></script>
-        <script src="backend/assets/js/jquery.app.js"></script>
+        <script src="../backend/assets/js/jquery.core.js"></script>
+        <script src="../backend/assets/js/jquery.app.js"></script>
+
+        <script src="../backend/plugins/bootstrap-fileupload/bootstrap-fileupload.js"></script>
 
     </body>
 </html>

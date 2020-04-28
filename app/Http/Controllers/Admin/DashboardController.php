@@ -15,4 +15,14 @@ class DashboardController extends Controller
         return view('AdminPage.SubAdmin.trangchu');
         // return "dashboard";
     }
+
+    public function AddShoes()
+    {
+        return view('AdminPage.SubAdmin.addshoes');
+    }
+
+    public function postAddShoes()
+    {
+        return redirect('/')->with('ThongBao','Thêm thành công.');
+    }
 }
