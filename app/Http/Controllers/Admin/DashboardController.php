@@ -12,7 +12,7 @@ use App\Shoes;
 class DashboardController extends Controller
 {
     public function getIndex(){
-        return "asdfasdfasdf";
+        return view('AdminPage.SubAdmin.trangchu');
         // return "dashboard";
     }
 }
