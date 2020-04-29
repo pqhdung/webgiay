@@ -26,60 +26,67 @@
                     <h4 class="m-t-0 header-title">NEW SHOES</h4>
                     <p class="text-muted m-b-30 font-14">
                     </p>
-
+                    {{-- @if(count($errors)>0)
+                    <div class="btn btn-info">
+                        @foreach($errors->all() as $err)
+                        {{$err}}
+                        @endforeach
+                    </div>
+                    @endif --}}
+                    <hr/>
                     <div class="row">
                         <div class="col-12">
                             <div class="p-20">
-                                <form class="form-horizontal" action="add-shoes" method="post" role="form">
+                                <form class="form-horizontal" action="add-shoes" method="post"  enctype="multipart/form-data">
+                                    {{ csrf_field() }}
                                     <div class="form-group row">
                                         <label class="col-2 col-form-label">Name</label>
                                         <div class="col-10">
-                                            <input type="text" class="form-control" value="Some text value...">
+                                            <input type="text" class="form-control" name="name">
                                         </div>
                                     </div>                      
                                     <div class="form-group row">
                                         <label class="col-2 col-form-label">Description</label>
                                         <div class="col-10">
-                                            <textarea class="form-control" rows="5"></textarea>
+                                            <textarea class="form-control" rows="5" name="description"></textarea>
                                         </div>
                                     </div>
-
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="card-box">
-                                                <div class="row">
-                                                    <div class="col-md-4">
+                                                <div class="row ">
+                                                    <div class="col-md-4 form-group">
                                                         <h4 class="m-t-0 header-title">Category</h4>
                                                         <p class="text-muted m-b-30 font-14">
                                                         </p>
                     
-                                                        <select class="custom-select mt-3">
+                                                        <select class="custom-select mt-3" name="category">
                                                             <option selected>select category</option>
-                                                            <option value="1">One</option>
-                                                            <option value="2">Two</option>
-                                                            <option value="3">Three</option>
+                                                            @foreach ($category as $cate)
+                                                            <option value="{{$cate->id}}">{{$cate->producer->name_producer}} - {{ $cate->name_category}}</option>
+                                                            @endforeach
                                                         </select>
                                                     </div>
-                                                    <div class="col-md-4">
+                                                    <div class="col-md-4 form-group">
                                                         <h4 class="m-t-0 header-title">Size</h4>
                                                         <p class="text-muted m-b-30 font-14">
                                                         </p>
-                                                        <select class="custom-select mt-3">
+                                                        <select class="custom-select mt-3" name="size">
                                                             <option selected>select size</option>
-                                                            <option value="1">One</option>
-                                                            <option value="2">Two</option>
-                                                            <option value="3">Three</option>
+                                                            @foreach ($size as $Size)
+                                                            <option value="{{$Size->id}}">{{$Size->size}}</option>
+                                                            @endforeach
                                                         </select>
                                                     </div>
-                                                    <div class="col-md-4">
+                                                    <div class="col-md-4 form-group">
                                                         <h4 class="m-t-0 header-title">Color</h4>
                                                         <p class="text-muted m-b-30 font-14">
                                                         </p>
-                                                        <select class="custom-select mt-3">
+                                                        <select class="custom-select mt-3" name="color">
                                                             <option selected>select color</option>
-                                                            <option value="1">One</option>
-                                                            <option value="2">Two</option>
-                                                            <option value="3">Three</option>
+                                                            @foreach ($colors as $Colors)
+                                                            <option value="{{$Colors->id}}">{{$Colors->name_color}}</option>
+                                                            @endforeach
                                                         </select>
                                                     </div>
                                                 </div>
@@ -87,59 +94,46 @@
                                             </div> <!-- end card-box -->
                                         </div> <!-- end col -->
                                     </div>
-
                                     <div class="form-group row">
                                         <div class="col-6">
                                             <div class="card-box" style="height: 213.56px">
                                                 <div class="row">
-                                                    <div class="col-md-12">
+                                                    <div class="col-md-12 form-group">
                                                         <h4 class="m-t-0 header-title">Sex</h4>
                                                         <p class="text-muted m-b-30 font-14">
                                                         </p>
                     
-                                                        <select class="custom-select mt-3">
+                                                        <select class="custom-select mt-3" name="sex">
                                                             <option selected>select category</option>
-                                                            <option value="1">One</option>
-                                                            <option value="2">Two</option>
-                                                            <option value="3">Three</option>
+                                                            <option value="1">Nam</option>
+                                                            <option value="2">Nữ</option>
+                                                            <option value="3">Khác</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                             </div> <!-- end card-box -->
                                         </div> <!-- end col -->
                                        <div class="col-6">
-                                        <div class="card-box">
-                                            <label class="col-3 col-form-label m-t-0 header-title">Image Product</label>
-                                            <div class="col-9">
-                                                <div class="fileupload fileupload-new" data-provides="fileupload">
-                                                    <div class="row">
-                                                        <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
-                                                        <div>&nbsp
-                                                            <button type="button" class="btn btn-gradient btn-file">
-                                                                <span class="fileupload-new"><i class="fa fa-paper-clip"></i> Select image</span>
-                                                                <span class="fileupload-exists"><i class="fa fa-undo"></i> Change</span>
-                                                                <input type="file" class="btn-secondary" />
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="alert alert-info alert-white"><strong>Notice!</strong> Image preview only works in IE10+, FF3.6+, Chrome6.0+ and Opera11.1+. In older browsers and Safari, the filename is shown instead.</div>
+                                        <div class="col-md-6 card-box">
+                                            <div  class="form-group">
+                                                <h4 m-t-0 header-title><label>Image</label></h4>
+                                                <input type="file" name="images" placeholder="Chọn hình" />
                                             </div>
                                         </div>
                                        </div>
                                     </div>   
 
-                                    <div class="row">
+                                    <div class="row ">
                                         <div class="col-12">
                                             <div class="card-box">
-                                                <div class="row">
+                                                <div class="row form-group">
                                                     <div class="col-md-4">
                                                         <h4 class="m-t-0 header-title">Price</h4>
                                                         <p class="text-muted m-b-30 font-14">
                                                         </p>
                     
                                                         <div class="col-10">
-                                                            <input type="text" class="form-control" value="Some text value...">
+                                                            <input type="text" class="form-control"  name="price">
                                                         </div>
                                                     </div>
                                                 </div>
