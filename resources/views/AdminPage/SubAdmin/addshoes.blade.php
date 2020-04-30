@@ -95,8 +95,8 @@
                                         </div> <!-- end col -->
                                     </div>
                                     <div class="form-group row">
-                                        <div class="col-6">
-                                            <div class="card-box" style="height: 213.56px">
+                                        <div class="col-3">
+                                            <div class="card-box">
                                                 <div class="row">
                                                     <div class="col-md-12 form-group">
                                                         <h4 class="m-t-0 header-title">Sex</h4>
@@ -113,6 +113,22 @@
                                                 </div>
                                             </div> <!-- end card-box -->
                                         </div> <!-- end col -->
+                                        <div class="col-3">
+                                            <div class="card-box">
+                                                <div class="row form-group">
+                                                    <div class="col-md-12">
+                                                        <h4 class="m-t-0 header-title">Price</h4>
+                                                        <p class="text-muted m-b-30 font-14">
+                                                        </p>
+                    
+                                                        <div class="col-12">
+                                                            <input type="text" class="form-control"  name="price">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                    
+                                            </div> <!-- end card-box -->
+                                        </div> <!-- end col -->
                                        <div class="col-6">
                                         <div class="col-md-6 card-box">
                                             <div  class="form-group">
@@ -124,22 +140,7 @@
                                     </div>   
 
                                     <div class="row ">
-                                        <div class="col-12">
-                                            <div class="card-box">
-                                                <div class="row form-group">
-                                                    <div class="col-md-4">
-                                                        <h4 class="m-t-0 header-title">Price</h4>
-                                                        <p class="text-muted m-b-30 font-14">
-                                                        </p>
-                    
-                                                        <div class="col-10">
-                                                            <input type="text" class="form-control"  name="price">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                    
-                                            </div> <!-- end card-box -->
-                                        </div> <!-- end col -->
+                                       
                                     </div>
 
                                     <div style="text-align: center">
