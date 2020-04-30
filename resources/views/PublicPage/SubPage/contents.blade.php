@@ -57,7 +57,7 @@
             </div>
 
             <div class="col-sm-6">
-              <div class="item-thumbnail"><img class="img-responsive" src="upload/{{$Shoes->images}}" alt="Item Thumbnail"></div><!-- /.item-thumbnail -->
+              <div class="item-thumbnail"><img class="img-responsive thumb" src="upload/{{$Shoes->images}}" alt="Item Thumbnail"></div><!-- /.item-thumbnail -->
             </div>
           </div><!-- /.item -->
         @endif
