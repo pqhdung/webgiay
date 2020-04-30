@@ -26,13 +26,15 @@
                     <h4 class="m-t-0 header-title">NEW SHOES</h4>
                     <p class="text-muted m-b-30 font-14">
                     </p>
-                    {{-- @if(count($errors)>0)
+                     @if($errors->any())
+                   
                     <div class="btn btn-info">
-                        @foreach($errors->all() as $err)
+                        @foreach($errors->all() as $err) 
                         {{$err}}
                         @endforeach
                     </div>
-                    @endif --}}
+                   
+                    @endif 
                     <hr/>
                     <div class="row">
                         <div class="col-12">
