@@ -66,10 +66,10 @@ class DashboardController extends Controller
         ]);
         $this->validate($this->request,
         [
-            'sex'             =>'required',
+            'gender'             =>'required',
         ],
         [
-            'sex.required'    =>'Bạn chưa chon giới tính.',
+            'gender.required'    =>'Bạn chưa chon giới tính.',
         ]);
         $this->validate($this->request,
         [
@@ -84,6 +84,13 @@ class DashboardController extends Controller
         ],
         [
             'price.required'    =>'Bạn chưa nhập giá bán.',
+        ]);
+        $this->validate($this->request,
+        [
+            'inventory'             =>'required',
+        ],
+        [
+            'inventory.required'    =>'Bạn chưa nhập số lượng giày.',
         ]);
         
         $shoes = new Shoes;
@@ -104,7 +111,8 @@ class DashboardController extends Controller
         $shoes->id_category             = $this->request->category;
         $shoes->id_color                = $this->request->color;
         $shoes->id_size                 = $this->request->size;
-        $shoes->sex                     = $this->request->sex;
+        $shoes->sex                     = $this->request->gender;
+        $shoes->inventory               = $this->request->inventory;
         $shoes->price                   = $this->request->price;
         $shoes->save();
 

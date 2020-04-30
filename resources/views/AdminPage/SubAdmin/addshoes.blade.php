@@ -101,14 +101,14 @@
                                             <div class="card-box">
                                                 <div class="row">
                                                     <div class="col-md-12 form-group">
-                                                        <h4 class="m-t-0 header-title">Sex</h4>
+                                                        <h4 class="m-t-0 header-title">Gender</h4>
                                                         <p class="text-muted m-b-30 font-14">
                                                         </p>
                     
-                                                        <select class="custom-select mt-3" name="sex">
+                                                        <select class="custom-select mt-3" name="gender">
                                                             <option selected>select category</option>
-                                                            <option value="1">Nam</option>
-                                                            <option value="2">Nữ</option>
+                                                            <option value="1">Male </option>
+                                                            <option value="2">Female</option>
                                                             <option value="3">Khác</option>
                                                         </select>
                                                     </div>
@@ -131,8 +131,24 @@
                     
                                             </div> <!-- end card-box -->
                                         </div> <!-- end col -->
-                                       <div class="col-6">
-                                        <div class="col-md-6 card-box">
+                                        <div class="col-3">
+                                            <div class="card-box">
+                                                <div class="row form-group">
+                                                    <div class="col-md-12">
+                                                        <h4 class="m-t-0 header-title">Inventory</h4>
+                                                        <p class="text-muted m-b-30 font-14">
+                                                        </p>
+                    
+                                                        <div class="col-12">
+                                                            <input type="number" class="form-control"  name="inventory">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                    
+                                            </div> <!-- end card-box -->
+                                        </div> <!-- end col -->
+                                       <div class="col-3">
+                                        <div class="col-md-12 card-box">
                                             <div  class="form-group">
                                                 <h4 m-t-0 header-title><label>Image</label></h4>
                                                 <input type="file" name="images" placeholder="Chọn hình" />
