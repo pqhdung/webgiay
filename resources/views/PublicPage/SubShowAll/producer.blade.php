@@ -1,6 +1,28 @@
 @extends('PublicPage.showAll')
 @section('main')
-
+<style>
+.thumb {
+    width: 258.5px;
+    height: 276.67px;
+    background-color: #3e3e3e;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    object-fit: cover;
+}
+.thumblist {
+    width: 360.50px;
+    height: 295.50px;
+    background-color: #3e3e3e;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    object-fit: cover;
+}
+/* fit hình ảnh tự động fit theo heigh width của thẻ */
+</style>
 <section class="page-name-sec page-name-sec-01">
   <div class="section-padding">
     <div class="container">
@@ -86,15 +108,21 @@
         </div>
       </div><!-- /.product-filter -->
 
-      <div class="shop-products">
+
+      
+    <div class="shop-products">
         <div class="row">
+        
           <div class="tab-content">
+
+          
             <div role="tabpanel" class="tab-pane fade active in text-center" id="grid">
+            @foreach($shoes as $singleshoes)
               <div class="col-sm-3">
                 <div class="item">
                   <div class="item-thumbnail">
-                    <a class="fancybox" href="fontend/images/home08/featured/1.jpg">
-                      <img src="fontend/images/home08/featured/1.jpg" alt="Item Thumbnail">
+                    <a class="fancybox" href="upload/{{$singleshoes->images}}">
+                      <img class = "thumb" src="upload/{{$singleshoes->images}}" alt="Item Thumbnail">
                     </a>
                   </div><!-- /.item-thumbnail -->
 
@@ -103,10 +131,10 @@
                       <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
                       <button class="wish-list"><i class="fa fa-heart"></i></button>
                     </div><!-- /.buttons -->
-                    <h3 class="item-title"><a href="#">Product name here</a></h3><!-- /.item-title -->
+                    <h3 class="item-title"><a href="#">{{$singleshoes->name}}</a></h3><!-- /.item-title -->
                     <div class="item-price">
                       <span class="currency">$</span>
-                      <span class="price">49.00</span>
+                      <span class="price">{{$singleshoes->price}}</span>
                     </div><!-- /.item-price -->
                     <div class="rating">
                       <input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/>
@@ -115,314 +143,25 @@
                   </div><!-- /.item-content -->
                 </div><!-- /.item -->
               </div>
-
-              <div class="col-sm-3">
-                <div class="item">
-                  <div class="item-thumbnail">
-                    <a class="fancybox" href="fontend/images/home08/featured/2.jpg">
-                      <img src="fontend/images/home08/featured/2.jpg" alt="Item Thumbnail">
-                    </a>
-                    <span class="ribbon sale">Sale</span>
-                  </div><!-- /.item-thumbnail -->
-
-                  <div class="item-content">
-                    <div class="buttons">
-                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
-                      <button class="wish-list"><i class="fa fa-heart"></i></button>
-                    </div><!-- /.buttons -->
-                    <h3 class="item-title"><a href="#">Product name here</a></h3><!-- /.item-title -->
-                    <div class="item-price">
-                      <span class="currency">$</span>
-                      <span class="price">49.00</span>
-                    </div><!-- /.item-price -->
-                    <div class="rating">
-                      <input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/>
-                    </div><!-- /.rating -->
-
-                  </div><!-- /.item-content -->
-                </div><!-- /.item -->
-              </div>
-
-              <div class="col-sm-3">
-                <div class="item">
-                  <div class="item-thumbnail">
-                    <a class="fancybox" href="fontend/images/home08/featured/3.jpg">
-                      <img src="fontend/images/home08/featured/3.jpg" alt="Item Thumbnail">
-                    </a>
-                  </div><!-- /.item-thumbnail -->
-
-                  <div class="item-content">
-                    <div class="buttons">
-                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
-                      <button class="wish-list"><i class="fa fa-heart"></i></button>
-                    </div><!-- /.buttons -->
-                    <h3 class="item-title"><a href="#">Product name here</a></h3><!-- /.item-title -->
-                    <div class="item-price">
-                      <span class="currency">$</span>
-                      <span class="price">49.00</span>
-                    </div><!-- /.item-price -->
-                    <div class="rating">
-                      <input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/>
-                    </div><!-- /.rating -->
-
-                  </div><!-- /.item-content -->
-                </div><!-- /.item -->
-              </div>
-
-              <div class="col-sm-3">
-                <div class="item">
-                  <div class="item-thumbnail">
-                    <a class="fancybox" href="fontend/images/home08/featured/4.jpg">
-                      <img src="fontend/images/home08/featured/4.jpg" alt="Item Thumbnail">
-                    </a>
-                  </div><!-- /.item-thumbnail -->
-
-                  <div class="item-content">
-                    <div class="buttons">
-                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
-                      <button class="wish-list"><i class="fa fa-heart"></i></button>
-                    </div><!-- /.buttons -->
-                    <h3 class="item-title"><a href="#">Product name here</a></h3><!-- /.item-title -->
-                    <div class="item-price">
-                      <span class="currency">$</span>
-                      <span class="price">49.00</span>
-                    </div><!-- /.item-price -->
-                    <div class="rating">
-                      <input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/>
-                    </div><!-- /.rating -->
-
-                  </div><!-- /.item-content -->
-                </div><!-- /.item -->
-              </div>
-
-              <div class="col-sm-3">
-                <div class="item">
-                  <div class="item-thumbnail">
-                    <a class="fancybox" href="fontend/images/home08/featured/5.jpg">
-                      <img src="fontend/images/home08/featured/5.jpg" alt="Item Thumbnail">
-                    </a>
-                  </div><!-- /.item-thumbnail -->
-
-                  <div class="item-content">
-                    <div class="buttons">
-                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
-                      <button class="wish-list"><i class="fa fa-heart"></i></button>
-                    </div><!-- /.buttons -->
-                    <h3 class="item-title"><a href="#">Product name here</a></h3><!-- /.item-title -->
-                    <div class="item-price">
-                      <span class="currency">$</span>
-                      <span class="price">49.00</span>
-                    </div><!-- /.item-price -->
-                    <div class="rating">
-                      <input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/>
-                    </div><!-- /.rating -->
-
-                  </div><!-- /.item-content -->
-                </div><!-- /.item -->
-              </div>
-
-              <div class="col-sm-3">
-                <div class="item">
-                  <div class="item-thumbnail">
-                    <a class="fancybox" href="fontend/images/home08/featured/6.jpg">
-                      <img src="fontend/images/home08/featured/6.jpg" alt="Item Thumbnail">
-                    </a>
-                    <span class="ribbon new">New</span>
-                  </div><!-- /.item-thumbnail -->
-
-                  <div class="item-content">
-                    <div class="buttons">
-                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
-                      <button class="wish-list"><i class="fa fa-heart"></i></button>
-                    </div><!-- /.buttons -->
-                    <h3 class="item-title"><a href="#">Product name here</a></h3><!-- /.item-title -->
-                    <div class="item-price">
-                      <span class="currency">$</span>
-                      <span class="price">49.00</span>
-                    </div><!-- /.item-price -->
-                    <div class="rating">
-                      <input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/>
-                    </div><!-- /.rating -->
-
-                  </div><!-- /.item-content -->
-                </div><!-- /.item -->
-              </div>
-
-              <div class="col-sm-3">
-                <div class="item">
-                  <div class="item-thumbnail">
-                    <a class="fancybox" href="fontend/images/home08/featured/7.jpg">
-                      <img src="fontend/images/home08/featured/7.jpg" alt="Item Thumbnail">
-                    </a>
-                  </div><!-- /.item-thumbnail -->
-
-                  <div class="item-content">
-                    <div class="buttons">
-                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
-                      <button class="wish-list"><i class="fa fa-heart"></i></button>
-                    </div><!-- /.buttons -->
-                    <h3 class="item-title"><a href="#">Product name here</a></h3><!-- /.item-title -->
-                    <div class="item-price">
-                      <span class="currency">$</span>
-                      <span class="price">49.00</span>
-                    </div><!-- /.item-price -->
-                    <div class="rating">
-                      <input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/>
-                    </div><!-- /.rating -->
-
-                  </div><!-- /.item-content -->
-                </div><!-- /.item -->
-              </div>
-
-              <div class="col-sm-3">
-                <div class="item">
-                  <div class="item-thumbnail">
-                    <a class="fancybox" href="fontend/images/home08/featured/8.jpg">
-                      <img src="fontend/images/home08/featured/8.jpg" alt="Item Thumbnail">
-                    </a>
-                    <span class="ribbon sale">Sale</span>
-                  </div><!-- /.item-thumbnail -->
-
-                  <div class="item-content">
-                    <div class="buttons">
-                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
-                      <button class="wish-list"><i class="fa fa-heart"></i></button>
-                    </div><!-- /.buttons -->
-                    <h3 class="item-title"><a href="#">Product name here</a></h3><!-- /.item-title -->
-                    <div class="item-price">
-                      <span class="currency">$</span>
-                      <span class="price">49.00</span>
-                    </div><!-- /.item-price -->
-                    <div class="rating">
-                      <input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/>
-                    </div><!-- /.rating -->
-
-                  </div><!-- /.item-content -->
-                </div><!-- /.item -->
-              </div>
-
-              <div class="col-sm-3">
-                <div class="item">
-                  <div class="item-thumbnail">
-                    <a class="fancybox" href="fontend/images/home08/featured/9.jpg">
-                      <img src="fontend/images/home08/featured/9.jpg" alt="Item Thumbnail">
-                    </a>
-                  </div><!-- /.item-thumbnail -->
-
-                  <div class="item-content">
-                    <div class="buttons">
-                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
-                      <button class="wish-list"><i class="fa fa-heart"></i></button>
-                    </div><!-- /.buttons -->
-                    <h3 class="item-title"><a href="#">Product name here</a></h3><!-- /.item-title -->
-                    <div class="item-price">
-                      <span class="currency">$</span>
-                      <span class="price">49.00</span>
-                    </div><!-- /.item-price -->
-                    <div class="rating">
-                      <input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/>
-                    </div><!-- /.rating -->
-
-                  </div><!-- /.item-content -->
-                </div><!-- /.item -->
-              </div>
-
-              <div class="col-sm-3">
-                <div class="item">
-                  <div class="item-thumbnail">
-                    <a class="fancybox" href="fontend/images/home08/featured/10.jpg">
-                      <img src="fontend/images/home08/featured/10.jpg" alt="Item Thumbnail">
-                    </a>
-                  </div><!-- /.item-thumbnail -->
-
-                  <div class="item-content">
-                    <div class="buttons">
-                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
-                      <button class="wish-list"><i class="fa fa-heart"></i></button>
-                    </div><!-- /.buttons -->
-                    <h3 class="item-title"><a href="#">Product name here</a></h3><!-- /.item-title -->
-                    <div class="item-price">
-                      <span class="currency">$</span>
-                      <span class="price">49.00</span>
-                    </div><!-- /.item-price -->
-                    <div class="rating">
-                      <input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/>
-                    </div><!-- /.rating -->
-
-                  </div><!-- /.item-content -->
-                </div><!-- /.item -->
-              </div>
-
-              <div class="col-sm-3">
-                <div class="item">
-                  <div class="item-thumbnail">
-                    <a class="fancybox" href="fontend/images/home08/featured/11.jpg">
-                      <img src="fontend/images/home08/featured/11.jpg" alt="Item Thumbnail">
-                    </a>
-                  </div><!-- /.item-thumbnail -->
-
-                  <div class="item-content">
-                    <div class="buttons">
-                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
-                      <button class="wish-list"><i class="fa fa-heart"></i></button>
-                    </div><!-- /.buttons -->
-                    <h3 class="item-title"><a href="#">Product name here</a></h3><!-- /.item-title -->
-                    <div class="item-price">
-                      <span class="currency">$</span>
-                      <span class="price">49.00</span>
-                    </div><!-- /.item-price -->
-                    <div class="rating">
-                      <input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/>
-                    </div><!-- /.rating -->
-
-                  </div><!-- /.item-content -->
-                </div><!-- /.item -->
-              </div>
-
-              <div class="col-sm-3">
-                <div class="item">
-                  <div class="item-thumbnail">
-                    <a class="fancybox" href="fontend/images/home08/featured/3.jpg">
-                      <img src="fontend/images/home08/featured/3.jpg" alt="Item Thumbnail">
-                    </a>
-                    <span class="ribbon new">New</span>
-                  </div><!-- /.item-thumbnail -->
-
-                  <div class="item-content">
-                    <div class="buttons">
-                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
-                      <button class="wish-list"><i class="fa fa-heart"></i></button>
-                    </div><!-- /.buttons -->
-                    <h3 class="item-title"><a href="#">Product name here</a></h3><!-- /.item-title -->
-                    <div class="item-price">
-                      <span class="currency">$</span>
-                      <span class="price">49.00</span>
-                    </div><!-- /.item-price -->
-                    <div class="rating">
-                      <input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/>
-                    </div><!-- /.rating -->
-
-                  </div><!-- /.item-content -->
-                </div><!-- /.item -->
-              </div>
-
+              @endforeach    
             </div><!-- /.tab-pane -->
-
+             
             <div role="tabpanel" class="tab-pane fade text-left" id="list">
+            @foreach($shoes as $singleshoes)  
               <div class="item media">
                 <div class="item-thumbnail media-left">
-                  <img src="fontend/images/home08/featured/1.jpg" alt="Item Thumbnail">
+                  <img class="thumblist" src="upload/{{$singleshoes->images}}" alt="Item Thumbnail">
                 </div><!-- /.item-image -->
 
                 <div class="item-content media-body">
-                  <h3 class="item-title"><a href="#">Product Name Here</a></h3><!-- /.item-title -->
+                  <h3 class="item-title"><a href="#">{{$singleshoes->name}}</a></h3><!-- /.item-title -->
 
                   <div class="item-price">
-                    <div class="current-price"><span class="currency">$</span><span class="price">65</span></div><!-- /.current-price -->
+                    <div class="current-price"><span class="currency">$</span><span class="price">{{$singleshoes->price}}</span></div><!-- /.current-price -->
                   </div><!-- /.item-price -->
 
                   <p class="description">
-                    Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora 
+                  {{$singleshoes->product}}
                   </p><!-- /.description -->
 
                   <div class="item-bottom">
@@ -438,228 +177,15 @@
                   </div><!-- /.item-bottom -->
                 </div><!-- /.item-details -->
               </div><!-- /.item -->
-
-              <div class="item media">
-                <div class="item-thumbnail media-left">
-                  <img src="fontend/images/home08/featured/2.jpg" alt="Item Thumbnail">
-                  <span class="ribbon sale">Sale</span>
-                </div><!-- /.item-image -->
-
-                <div class="item-content media-body">
-                  <h3 class="item-title"><a href="#">Product Name Here</a></h3><!-- /.item-title -->
-
-                  <div class="item-price">
-                    <div class="current-price"><span class="currency">$</span><span class="price">65</span></div><!-- /.current-price -->
-                    <div class="previous-price"><span class="currency">$</span><span class="price">85</span></div><!-- /.previous-price -->
-                  </div><!-- /.item-price -->
-
-                  <p class="description">
-                    Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora 
-                  </p><!-- /.description -->
-
-                  <div class="item-bottom">
-                    <div class="buttons">
-                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
-                      <button class="wish-list"><i class="fa fa-heart"></i></button>
-                      <a class="fancybox" href="fontend/images/home08/featured/2.jpg"><i class="fa fa-search"></i></a>
-                      <button class="compare"><i class="fa fa-exchange"></i></button>
-                    </div><!-- /.buttons -->
-
-                    <div class="rating"><input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/></div><!-- /.rating -->
-
-                  </div><!-- /.item-bottom -->
-                </div><!-- /.item-content -->
-              </div><!-- /.item -->
-
-              <div class="item media">
-                <div class="item-thumbnail media-left">
-                  <img src="fontend/images/home08/featured/3.jpg" alt="Item Thumbnail">
-                </div><!-- /.item-image -->
-
-                <div class="item-content media-body">
-                  <h3 class="item-title"><a href="#">Product Name Here</a></h3><!-- /.item-title -->
-
-                  <div class="item-price">
-                    <div class="current-price"><span class="currency">$</span><span class="price">65</span></div><!-- /.current-price -->
-                  </div><!-- /.item-price -->
-
-                  <p class="description">
-                    Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora 
-                  </p><!-- /.description -->
-
-                  <div class="item-bottom">
-                    <div class="buttons">
-                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
-                      <button class="wish-list"><i class="fa fa-heart"></i></button>
-                      <a class="fancybox" href="fontend/images/home08/featured/3.jpg"><i class="fa fa-search"></i></a>
-                      <button class="compare"><i class="fa fa-exchange"></i></button>
-                    </div><!-- /.buttons -->
-
-                    <div class="rating"><input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/></div><!-- /.rating -->
-
-                  </div><!-- /.item-bottom -->
-                </div><!-- /.item-content -->
-              </div><!-- /.item -->
-
-              <div class="item media">
-                <div class="item-thumbnail media-left">
-                  <img src="fontend/images/home08/featured/4.jpg" alt="Item Thumbnail">
-                  <span class="ribbon new">new</span>
-                </div><!-- /.item-image -->
-
-                <div class="item-content media-body">
-                  <h3 class="item-title"><a href="#">Product Name Here</a></h3><!-- /.item-title -->
-
-                  <div class="item-price">
-                    <div class="current-price"><span class="currency">$</span><span class="price">65</span></div><!-- /.current-price -->
-                  </div><!-- /.item-price -->
-
-                  <p class="description">
-                    Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora 
-                  </p><!-- /.description -->
-
-                  <div class="item-bottom">
-                    <div class="buttons">
-                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
-                      <button class="wish-list"><i class="fa fa-heart"></i></button>
-                      <a class="fancybox" href="fontend/images/home08/featured/4.jpg"><i class="fa fa-search"></i></a>
-                      <button class="compare"><i class="fa fa-exchange"></i></button>
-                    </div><!-- /.buttons -->
-
-                    <div class="rating"><input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/></div><!-- /.rating -->
-
-                  </div><!-- /.item-bottom -->
-                </div><!-- /.item-content -->
-              </div><!-- /.item -->
-
-              <div class="item media">
-                <div class="item-thumbnail media-left">
-                  <img src="fontend/images/home08/featured/5.jpg" alt="Item Thumbnail">
-                </div><!-- /.item-image -->
-
-                <div class="item-content media-body">
-                  <h3 class="item-title"><a href="#">Product Name Here</a></h3><!-- /.item-title -->
-
-                  <div class="item-price">
-                    <div class="current-price"><span class="currency">$</span><span class="price">65</span></div><!-- /.current-price -->
-                  </div><!-- /.item-price -->
-
-                  <p class="description">
-                    Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora 
-                  </p><!-- /.description -->
-
-                  <div class="item-bottom">
-                    <div class="buttons">
-                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
-                      <button class="wish-list"><i class="fa fa-heart"></i></button>
-                      <a class="fancybox" href="fontend/images/home08/featured/5.jpg"><i class="fa fa-search"></i></a>
-                      <button class="compare"><i class="fa fa-exchange"></i></button>
-                    </div><!-- /.buttons -->
-
-                    <div class="rating"><input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/></div><!-- /.rating -->
-
-                  </div><!-- /.item-bottom -->
-                </div><!-- /.item-content -->
-              </div><!-- /.item -->
-
-              <div class="item media">
-                <div class="item-thumbnail media-left">
-                  <img src="fontend/images/home08/featured/6.jpg" alt="Item Thumbnail">
-                  <span class="ribbon sale">Sale</span>
-                </div><!-- /.item-image -->
-
-                <div class="item-content media-body">
-                  <h3 class="item-title"><a href="#">Product Name Here</a></h3><!-- /.item-title -->
-
-                  <div class="item-price">
-                    <div class="current-price"><span class="currency">$</span><span class="price">65</span></div><!-- /.current-price -->
-                    <div class="previous-price"><span class="currency">$</span><span class="price">85</span></div><!-- /.previous-price -->
-                  </div><!-- /.item-price -->
-
-                  <p class="description">
-                    Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora 
-                  </p><!-- /.description -->
-
-                  <div class="item-bottom">
-                    <div class="buttons">
-                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
-                      <button class="wish-list"><i class="fa fa-heart"></i></button>
-                      <a class="fancybox" href="fontend/images/home08/featured/6.jpg"><i class="fa fa-search"></i></a>
-                      <button class="compare"><i class="fa fa-exchange"></i></button>
-                    </div><!-- /.buttons -->
-
-                    <div class="rating"><input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/></div><!-- /.rating -->
-
-                  </div><!-- /.item-bottom -->
-                </div><!-- /.item-content -->
-              </div><!-- /.item -->
-
-              <div class="item media">
-                <div class="item-thumbnail media-left">
-                  <img src="fontend/images/home08/featured/7.jpg" alt="Item Thumbnail">
-                </div><!-- /.item-image -->
-
-                <div class="item-content media-body">
-                  <h3 class="item-title"><a href="#">Product Name Here</a></h3><!-- /.item-title -->
-
-                  <div class="item-price">
-                    <div class="current-price"><span class="currency">$</span><span class="price">65</span></div><!-- /.current-price -->
-                  </div><!-- /.item-price -->
-
-                  <p class="description">
-                    Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora 
-                  </p><!-- /.description -->
-
-                  <div class="item-bottom">
-                    <div class="buttons">
-                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
-                      <button class="wish-list"><i class="fa fa-heart"></i></button>
-                      <a class="fancybox" href="fontend/images/home08/featured/7.jpg"><i class="fa fa-search"></i></a>
-                      <button class="compare"><i class="fa fa-exchange"></i></button>
-                    </div><!-- /.buttons -->
-
-                    <div class="rating"><input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/></div><!-- /.rating -->
-
-                  </div><!-- /.item-bottom -->
-                </div><!-- /.item-content -->
-              </div><!-- /.item -->
-
-              <div class="item media">
-                <div class="item-thumbnail media-left">
-                  <img src="fontend/images/home08/featured/8.jpg" alt="Item Thumbnail">
-                  <span class="ribbon new">new</span>
-                </div><!-- /.item-image -->
-
-                <div class="item-content media-body">
-                  <h3 class="item-title"><a href="#">Product Name Here</a></h3><!-- /.item-title -->
-
-                  <div class="item-price">
-                    <div class="current-price"><span class="currency">$</span><span class="price">65</span></div><!-- /.current-price -->
-                  </div><!-- /.item-price -->
-
-                  <p class="description">
-                    Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora 
-                  </p><!-- /.description -->
-
-                  <div class="item-bottom">
-                    <div class="buttons">
-                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
-                      <button class="wish-list"><i class="fa fa-heart"></i></button>
-                      <a class="fancybox" href="fontend/images/home08/featured/8.jpg"><i class="fa fa-search"></i></a>
-                      <button class="compare"><i class="fa fa-exchange"></i></button>
-                    </div><!-- /.buttons -->
-
-                    <div class="rating"><input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/></div><!-- /.rating -->
-
-                  </div><!-- /.item-bottom -->
-                </div><!-- /.item-content -->
-              </div><!-- /.item -->
-
+              @endforeach    
             </div><!-- /.tab-pane -->
+            
           </div><!-- /.tab-content -->
+       
         </div><!-- /.row -->
       </div><!-- /.shop-products -->
-
+      
+            
       <div class="pagination pagination-02 text-center">
         <a href="#" class="prev"><i class="ti-angle-double-left"></i></a>
         <a href="#" class="active">1</a>
