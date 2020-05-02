@@ -61,3 +61,6 @@ Route::get('/producer-cv-chuck70s.html', 'CategoryController@showCategoryConvers
 Route::get('/producer-cv-allstar.html', 'CategoryController@showCategoryConverseAllStar');
 
 Route::get('/producer-bitis-hunter.html', 'CategoryController@showCategoryBitisHunter');
+Route::get('/producer.html', 'ProducerController@showAllProducer');
+
+Route::get('all-shoes','PublicController@getAllShoes');

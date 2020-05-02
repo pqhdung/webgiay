@@ -11,6 +11,26 @@
     background-size: cover;
     object-fit: cover;
 }
+.thumb2 {
+    width: 610px;
+    height: 474px;
+    background-color: #3e3e3e;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    object-fit: cover;
+}
+.thumb3 {
+    width: 394.33px;
+    height: 270.33px;
+    background-color: #3e3e3e;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    object-fit: cover;
+}
 /* fit hình ảnh tự động fit theo heigh width của thẻ */
 </style>
 <div class="section-contents">
@@ -75,7 +95,7 @@
             <p class="description">
               {{$Shoes2->product}}
             </p><!-- /.description -->
-            <div class="item-thumbnail"><img class="img-responsive" src="upload/{{$Shoes2->images}}" alt="Item Thumbnail"></div><!-- /.item-thumbnail -->
+            <div class="item-thumbnail"><img class="img-responsive thumb2" src="upload/{{$Shoes2->images}}" alt="Item Thumbnail"></div><!-- /.item-thumbnail -->
             <div class="item-price"><span class="price">{{number_format($Shoes2->price,0, ",",".")}}</span><span class="currency">vnd</span></div><!-- /.item-price -->
             <a href="#" class="btn">Start shopping now</a><!-- /.btn -->
           </div><!-- /.item -->
@@ -108,9 +128,9 @@
           <h2 class="item-no">{{$num}}</h2><!-- /.item-no -->
           <h3 class="item-title">{{$Shoes3->name}}</h3><!-- /.item-title -->
           <p class="description">
-            {{$Shoes3->product}}
+            {{ \Illuminate\Support\Str::limit(strip_tags($Shoes3->product),50,'...')}}
           </p><!-- /.description -->
-          <div class="item-thumbnail"><img class="img-responsive" src="upload/{{$Shoes3->images}}" alt="Item Thumbnail"></div><!-- /.item-thumbnail -->
+          <div class="item-thumbnail"><img class="img-responsive thumb3" src="upload/{{$Shoes3->images}}" alt="Item Thumbnail"></div><!-- /.item-thumbnail -->
           <div class="item-price"><span class="price">{{number_format($Shoes3->price,0, ",",".")}}</span><span class="currency">vnd</span></div><!-- /.item-price -->
           <a href="#" class="btn">Start shopping now</a><!-- /.btn -->
         </div><!-- /.item -->
