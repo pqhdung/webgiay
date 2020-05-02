@@ -20,4 +20,44 @@ Route::get('/thanhvien.html', function(){
 
 });
 
-Route::get('/producer.html', 'ProducerController@showAllProducer');
+/* route Producer */
+Route::group(['prefix'=>'producer'], function(){
+
+	Route::get('all.html', 'ProducerController@showAllProducer');
+});
+
+Route::get('/producer-nike.html', 'ProducerController@showAllNike');
+
+Route::get('/producer-adidas.html', 'ProducerController@showAllAdidas');
+
+Route::get('/producer-newbalance.html', 'ProducerController@showAllNewBalance');
+
+Route::get('/producer-converse.html', 'ProducerController@showAllConverse');
+
+Route::get('/producer-bitis.html', 'ProducerController@showAllBitis');
+
+/* route Category */
+
+Route::get('/producer-nike-jordan.html', 'CategoryController@showCategoryNikeJordan');
+
+Route::get('/producer-nike-air.html', 'CategoryController@showCategoryNikeAir');
+
+Route::get('/producer-nike-running.html', 'CategoryController@showCategoryNikeRunning');
+
+Route::get('/producer-adidas-ultraboost.html', 'CategoryController@showCategoryAdidasUltraboost');
+
+Route::get('/producer-adidas-nmd.html', 'CategoryController@showCategoryAdidasNMD');
+
+Route::get('/producer-adidas-stansmith.html', 'CategoryController@showCategoryAdidasStanSmith');
+
+Route::get('/producer-nb-running.html', 'CategoryController@showCategoryNewBalanceRunning');
+
+Route::get('/producer-nb-walking.html', 'CategoryController@showCategoryNewBalanceWalking');
+
+Route::get('/producer-cv-classic.html', 'CategoryController@showCategoryConverseClassic');
+
+Route::get('/producer-cv-chuck70s.html', 'CategoryController@showCategoryConverseChuck70s');
+
+Route::get('/producer-cv-allstar.html', 'CategoryController@showCategoryConverseAllStar');
+
+Route::get('/producer-bitis-hunter.html', 'CategoryController@showCategoryBitisHunter');
