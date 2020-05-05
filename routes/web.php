@@ -63,4 +63,12 @@ Route::get('/producer-cv-allstar.html', 'CategoryController@showCategoryConverse
 Route::get('/producer-bitis-hunter.html', 'CategoryController@showCategoryBitisHunter');
 Route::get('/producer.html', 'ProducerController@showAllProducer');
 
+//show tất cả giày
 Route::get('all-shoes','PublicController@getAllShoes');
+
+//thêm sản phẩm vào giỏ hàng
+Route::get('add-to-cart/{id}','CartController@getAddToCart')->name('themvaogiohang');
+
+
+//route show giỏ hàng
+Route::get('show-cart','CartController@ShowAllCart')->name('gio-hang');

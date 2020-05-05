@@ -128,7 +128,7 @@
 
                   <div class="item-content">
                     <div class="buttons">
-                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
+                      <button class="add-to-cart"><a href="{{route('themvaogiohang',$singleshoes->id)}}">Add to cart<i class="fa fa-shopping-cart"></i></a></button>
                       <button class="wish-list"><i class="fa fa-heart"></i></button>
                     </div><!-- /.buttons -->
                     <h3 class="item-title"><a href="#">{{$singleshoes->name}}</a></h3><!-- /.item-title -->
@@ -166,9 +166,9 @@
 
                   <div class="item-bottom">
                     <div class="buttons">
-                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
+                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i><a href="{{route('themvaogiohang',$singleshoes->id)}}"></a></button>
                       <button class="wish-list"><i class="fa fa-heart"></i></button>
-                      <a class="fancybox" href="fontend/images/home08/featured/1.jpg"><i class="fa fa-search"></i></a>
+                      <a class="fancybox" href="#"><i class="fa fa-search"></i></a>
                       <button class="compare"><i class="fa fa-exchange"></i></button>
                     </div><!-- /.buttons -->
 
