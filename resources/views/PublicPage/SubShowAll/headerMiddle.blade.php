@@ -2,7 +2,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-3">
-          <h1><a class="navbar-brand hidden-xs" href="./"><img src="fontend/images/logo.png" alt="Site Logo"></a></h1>
+          <h1><a class="navbar-brand hidden-xs" href="/"><img src="../../fontend/images/logo.png" alt="Site Logo"></a></h1>
         </div>
         <div class="col-sm-7">
           <div class="top-search-form">
@@ -24,7 +24,6 @@
                   <option>Others</option>
                 </select>
               </fieldset>
-
               <input type="text" placeholder="Keywords ..." class="form-control">
               <button type="submit" class="btn"><i class="fa fa-search"></i></button>
             </form>  
@@ -32,7 +31,11 @@
         </div>
         <div class="col-sm-2">
           <div class="shop-cart">             
-            <a class="cart-control" href="{{route('gio-hang')}}" title="View your shopping cart">
+            <a class="cart-control" href="@if(Session::has('cart'))
+            {{route('gio-hang')}}
+            @else
+            #
+            @endif" title="View your shopping cart">
               <i class="ti-bag"></i>
               <span class="count">
                 @if(Session::has('cart'))
@@ -52,7 +55,7 @@
                   <div class="item media">
                     <button class="btn"><i class="fa fa-close"></i></button>
                     <div class="item-thumbnail media-left">
-                      <img src="fontend/images/menu/cart/1.png" alt="Item Thimbnail">
+                      <img src="../../fontend/images/menu/cart/1.png" alt="Item Thimbnail">
                     </div><!-- /.item-thumbnail -->
                     <div class="item-details media-body">
                       <div class="rating"><input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/></div><!-- /.rating -->

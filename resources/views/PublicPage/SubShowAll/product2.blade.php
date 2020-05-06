@@ -26,7 +26,7 @@
 <section class="page-name-sec page-name-sec-01">
   <div class="section-padding">
     <div class="container">
-    <h3 class="page-title">{{$title}}</h3><!-- /.page-title -->
+    <h3 class="page-title">{{$titleProduct}}</h3><!-- /.page-title -->
 
       <div class="row">
         <div class="col-sm-6">
@@ -38,8 +38,7 @@
         <div class="col-sm-6">
           <ol class="breadcrumb text-right">
             <li><a href="/">Home</a></li>
-            <li><a href="#">{{$titleProduct}}</a></li>
-            <li class="active">{{$title}}</li>
+            <li class="active">{{$titleProduct}}</li>
           </ol><!-- /.breadcrumb -->
         </div>
 

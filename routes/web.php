@@ -72,3 +72,9 @@ Route::get('add-to-cart/{id}','CartController@getAddToCart')->name('themvaogioha
 
 //route show giỏ hàng
 Route::get('show-cart','CartController@ShowAllCart')->name('gio-hang');
+
+//route get category theo id_category
+Route::get('category/{id}/{name}', 'PublicController@getCategory');
+
+//route get producer theo id_producer
+Route::get('producer/{id}/{name}', 'PublicController@getProducer');

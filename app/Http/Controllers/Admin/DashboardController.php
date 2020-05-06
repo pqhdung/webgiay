@@ -31,10 +31,10 @@ class DashboardController extends Controller
     {
         $this->validate($this->request,
         [
-            'name'             =>'required',
+            'name'             => 'required',
         ],
         [
-            'name.required'    =>'Bạn chưa nhập tên.',
+            'name.required'    => 'Bạn chưa nhập tên.',
         ]);
         $this->validate($this->request,
         [

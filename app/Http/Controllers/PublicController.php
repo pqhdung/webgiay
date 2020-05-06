@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
 
 use App\Producer;
 use App\Category;
@@ -25,5 +26,29 @@ class PublicController extends Controller
         $producer = Producer::select('id','name_producer')->get();
         $shoes    = Shoes::select('id','name','product','price','images')->inRandomOrder()->get();
         return view('PublicPage.SubShowAll.producer',['producer'=>$producer,'shoes'=>$shoes]);
+    }
+
+    public function getCategory($id, $name){
+        $shoes = Shoes::where('id_category',"$id")->get();
+        $producer = Producer::select('id','name_producer')
+        ->get();
+        $category = Category::find($id);
+        $titleProduct = $category->Producer->name_producer;
+        $title = $name;
+        return view('PublicPage.SubShowAll.producer', ['producer'=>$producer,'shoes'=>$shoes, 'title'=> $title,'titleProduct'=>$titleProduct]);
+    }
+
+    public function getProducer($id, $name){
+        $shoes = DB::table('Shoes')
+            ->join('category', 'category.id', '=','shoes.id_category')
+            ->join('producer','producer.id','=','category.id_producer')
+            ->whereRaw( "$id".'='.'producer.id')
+            ->get();
+
+        $titleProduct = $name;
+
+        $producer = Producer::select('id','name_producer')
+        ->get(); //trả về cho show menu
+        return view('PublicPage.SubShowAll.product2', ['producer'=>$producer,'shoes'=>$shoes,'titleProduct'=>$titleProduct]);
     }
 }
