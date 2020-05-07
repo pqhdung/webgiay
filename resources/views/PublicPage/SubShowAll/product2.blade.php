@@ -130,7 +130,7 @@
                       <button class="add-to-cart"><a href="{{route('themvaogiohang',$singleshoes->id)}}">Add to cart<i class="fa fa-shopping-cart"></i></a></button>
                       <button class="wish-list"><i class="fa fa-heart"></i></button>
                     </div><!-- /.buttons -->
-                    <h3 class="item-title"><a href="#">{{$singleshoes->name}}</a></h3><!-- /.item-title -->
+                    <h3 class="item-title"><a href="/product/{{$singleshoes->id}}/{{str_replace(" ","-",$singleshoes->name)}}">{{$singleshoes->name}}</a></h3><!-- /.item-title -->
                     <div class="item-price">
                       <span class="currency">$</span>
                       <span class="price">{{$singleshoes->price}}</span>
@@ -153,7 +153,7 @@
                 </div><!-- /.item-image -->
 
                 <div class="item-content media-body">
-                  <h3 class="item-title"><a href="#">{{$singleshoes->name}}</a></h3><!-- /.item-title -->
+                  <h3 class="item-title"><a href="/product/{{$singleshoes->id}}/{{str_replace(" ","-",$singleshoes->name)}}">{{$singleshoes->name}}</a></h3><!-- /.item-title -->
 
                   <div class="item-price">
                     <div class="current-price"><span class="currency">$</span><span class="price">{{$singleshoes->price}}</span></div><!-- /.current-price -->

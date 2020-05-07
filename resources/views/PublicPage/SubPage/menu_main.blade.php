@@ -8,13 +8,13 @@
       </li>
       @foreach ($producer as $Producer)
       <li class="menu-item menu-item-has-children menu-item-has-mega-menu">
-      <a href="/producer/{{$Producer->id}}/{{$Producer->name_producer}}">{{$Producer->name_producer}}</a>
+      <a href="/producer/{{$Producer->id}}/{{str_replace(" ","-",$Producer->name_producer)}}">{{$Producer->name_producer}}</a>
         <ul class="mega-menu sub-menu">
           <li>
             <div class="container">
               @foreach ($Producer->Category as $cate)
               <div class="menu-item col-sm-3">
-              <h6 class="menu-title"><a href="/category/{{$cate->id}}/{{$cate->name_category}}">{{$cate->name_category}}</a></h6>
+              <h6 class="menu-title"><a href="/category/{{$cate->id}}/{{str_replace(" ","-",$cate->name_category)}}">{{$cate->name_category}}</a></h6>
               </div>
               @endforeach
 

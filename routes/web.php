@@ -78,3 +78,6 @@ Route::get('category/{id}/{name}', 'PublicController@getCategory');
 
 //route get producer theo id_producer
 Route::get('producer/{id}/{name}', 'PublicController@getProducer');
+
+//show chi tiết sản phẩm
+Route::get('product/{id}/{name}','PublicController@getProductDetail');

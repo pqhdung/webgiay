@@ -9,7 +9,8 @@ use Illuminate\Support\Facades\DB;
 use App\Producer;
 use App\Category;
 use App\Shoes;
-
+use App\Colors;
+use App\Size;
 
 class PublicController extends Controller
 {
@@ -25,7 +26,9 @@ class PublicController extends Controller
     public function getAllShoes(){
         $producer = Producer::select('id','name_producer')->get();
         $shoes    = Shoes::select('id','name','product','price','images')->inRandomOrder()->get();
-        return view('PublicPage.SubShowAll.producer',['producer'=>$producer,'shoes'=>$shoes]);
+        $title = "All Shoes";
+        $titleProduct = $title;
+        return view('PublicPage.SubShowAll.producer',['producer'=>$producer,'shoes'=>$shoes, 'title'=> $title,'titleProduct'=>$titleProduct]);
     }
 
     public function getCategory($id, $name){
@@ -34,7 +37,7 @@ class PublicController extends Controller
         ->get();
         $category = Category::find($id);
         $titleProduct = $category->Producer->name_producer;
-        $title = $name;
+        $title = str_replace("-"," ", $name);
         return view('PublicPage.SubShowAll.producer', ['producer'=>$producer,'shoes'=>$shoes, 'title'=> $title,'titleProduct'=>$titleProduct]);
     }
 
@@ -45,10 +48,22 @@ class PublicController extends Controller
             ->whereRaw( "$id".'='.'producer.id')
             ->get();
 
-        $titleProduct = $name;
+        $titleProduct = str_replace("-"," ", $name);
 
         $producer = Producer::select('id','name_producer')
         ->get(); //trả về cho show menu
         return view('PublicPage.SubShowAll.product2', ['producer'=>$producer,'shoes'=>$shoes,'titleProduct'=>$titleProduct]);
+    }
+
+    public function getProductDetail($id,$name){
+
+        $producer = Producer::select('id','name_producer')
+        ->get(); //trả về cho show menu
+
+        $title = str_replace("-"," ",$name);
+
+        $shoes = Shoes::find($id);
+
+        return view('PublicPage.SubShowAll.productShoes',['producer'=>$producer,'title'=> $title,'shoes'=>$shoes]);
     }
 }
