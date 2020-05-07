@@ -9,8 +9,6 @@ use Illuminate\Support\Facades\DB;
 use App\Producer;
 use App\Category;
 use App\Shoes;
-use App\Colors;
-use App\Size;
 
 class PublicController extends Controller
 {
@@ -64,6 +62,6 @@ class PublicController extends Controller
 
         $shoes = Shoes::find($id);
 
-        return view('PublicPage.SubShowAll.productShoes',['producer'=>$producer,'title'=> $title,'shoes'=>$shoes]);
+        return view('PublicPage.SubShowAll.productShoes',['producer'=>$producer,'title'=> $title,'shoes'=>$shoes,  ]);
     }
 }

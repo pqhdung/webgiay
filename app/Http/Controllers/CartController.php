@@ -9,19 +9,15 @@ use App\Producer;
 use App\Category;
 use App\Shoes;
 use App\Cart;
-use App\Colors;
-use App\Size;
-
 
 class CartController extends Controller
 {
     public function getAddToCart(Request $req, $id){
         $shoes = Shoes::find($id);
-        $c = Colors::find($shoes->id_color);
-        // dd($c);
-        $color = $c->name_color;
-        $s  = Size::find($shoes->id_size);
-        $size = $s->size;
+
+        $color = $shoes->color;
+
+        $size = $shoes->size;
         $oldCart = Session('cart')?Session::get('cart'):null;
         $cart = new Cart($oldCart);
         $cart->add($shoes,$id,$color,$size);

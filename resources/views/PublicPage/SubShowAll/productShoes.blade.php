@@ -104,7 +104,7 @@
   
                   <select data-select-like-alignement="never" class="color drop-select">
                     <option value="">Color</option>
-                    <option value="2">White</option>
+                    <option value="2">{{$shoes->color}}</option>
                     <option value="3">Gray</option>
                     <option value="4">Red</option>
                     <option value="5">Blue</option>
