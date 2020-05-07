@@ -92,19 +92,19 @@
 	font-weight: 700;
 	text-align: center;
 }
-.cart-counter {
+.cart-counter-1 {
 	border: 1px solid #e7e7e7;
 	font-size: 13px;
 	max-width: 90px;
 	margin: 0 auto;
 }
-.cart-counter .item-count {
+.cart-counter-1 .item-count-1 {
 	color: #b2b2b2;
 	display: inline-block;
 	font-family: 'Poppins';
 	padding: 11px 13px 8px;
 }
-.cart-counter i {
+.cart-counter-1 i {
 	color: #808080;
 	font-size: 13px;
 }

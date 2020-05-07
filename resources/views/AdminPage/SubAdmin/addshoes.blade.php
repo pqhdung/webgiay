@@ -73,23 +73,25 @@
                                                         <h4 class="m-t-0 header-title">Size</h4>
                                                         <p class="text-muted m-b-30 font-14">
                                                         </p>
-                                                        <select class="custom-select mt-3" name="size">
+                                                        {{-- <select class="custom-select mt-3" name="size">
                                                             <option selected>select size</option>
                                                             @foreach ($size as $Size)
                                                             <option value="{{$Size->id}}">{{$Size->size}}</option>
                                                             @endforeach
-                                                        </select>
+                                                        </select> --}}
+                                                        <input type="text" class="form-control"  name="size">
                                                     </div>
                                                     <div class="col-md-4 form-group">
                                                         <h4 class="m-t-0 header-title">Color</h4>
                                                         <p class="text-muted m-b-30 font-14">
                                                         </p>
-                                                        <select class="custom-select mt-3" name="color">
+                                                        {{-- <select class="custom-select mt-3" name="color">
                                                             <option selected>select color</option>
                                                             @foreach ($colors as $Colors)
                                                             <option value="{{$Colors->id}}">{{$Colors->name_color}}</option>
                                                             @endforeach
-                                                        </select>
+                                                        </select> --}}
+                                                        <input type="text" class="form-control"  name="color">
                                                     </div>
                                                 </div>
                     

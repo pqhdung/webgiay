@@ -6,7 +6,7 @@
 
             <div class="col-md-4 col-sm-6">
               <div class="widget widget_about_us">
-                <a class="footer-logo" href="#"><img src="fontend/images/logo2.png" alt="Logo"></a>
+                <a class="footer-logo" href="#"><img src="../../fontend/images/logo2.png" alt="Logo"></a>
                 <div class="widget-details">
                   <p class="description">
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
@@ -54,14 +54,14 @@
               <div class="widget widget_instagram_feed">
                 <h4 class="widget-title">Instagram Photos</h4>
                 <div class="widget-details">
-                  <a href="#"><img src="fontend/images/instagram/1.png" alt="Instagram Image"></a>
-                  <a href="#"><img src="fontend/images/instagram/2.png" alt="Instagram Image"></a>
-                  <a href="#"><img src="fontend/images/instagram/3.png" alt="Instagram Image"></a>
-                  <a href="#"><img src="fontend/images/instagram/4.png" alt="Instagram Image"></a>
-                  <a href="#"><img src="fontend/images/instagram/5.png" alt="Instagram Image"></a>
-                  <a href="#"><img src="fontend/images/instagram/6.png" alt="Instagram Image"></a>
-                  <a href="#"><img src="fontend/images/instagram/7.png" alt="Instagram Image"></a>
-                  <a href="#"><img src="fontend/images/instagram/8.png" alt="Instagram Image"></a>
+                  <a href="#"><img src="../../fontend/images/instagram/1.png" alt="Instagram Image"></a>
+                  <a href="#"><img src="../../fontend/images/instagram/2.png" alt="Instagram Image"></a>
+                  <a href="#"><img src="../../fontend/images/instagram/3.png" alt="Instagram Image"></a>
+                  <a href="#"><img src="../../fontend/images/instagram/4.png" alt="Instagram Image"></a>
+                  <a href="#"><img src="../../fontend/images/instagram/5.png" alt="Instagram Image"></a>
+                  <a href="#"><img src="../../fontend/images/instagram/6.png" alt="Instagram Image"></a>
+                  <a href="#"><img src="../../fontend/images/instagram/7.png" alt="Instagram Image"></a>
+                  <a href="#"><img src="../../fontend/images/instagram/8.png" alt="Instagram Image"></a>
                 </div><!-- /.widget-details -->
               </div><!-- /.widget -->
             </div>
@@ -82,11 +82,11 @@
 
           <div class="col-sm-6 text-right">
             <div class="payment-list">
-              <a href="#"><img src="fontend/images/payment/1.png" alt="Payment Logo"></a>
-              <a href="#"><img src="fontend/images/payment/2.png" alt="Payment Logo"></a>
-              <a href="#"><img src="fontend/images/payment/3.png" alt="Payment Logo"></a>
-              <a href="#"><img src="fontend/images/payment/4.png" alt="Payment Logo"></a>
-              <a href="#"><img src="fontend/images/payment/5.png" alt="Payment Logo"></a>
+              <a href="#"><img src="../../fontend/images/payment/1.png" alt="Payment Logo"></a>
+              <a href="#"><img src="../../fontend/images/payment/2.png" alt="Payment Logo"></a>
+              <a href="#"><img src="../../fontend/images/payment/3.png" alt="Payment Logo"></a>
+              <a href="#"><img src="../../fontend/images/payment/4.png" alt="Payment Logo"></a>
+              <a href="#"><img src="../../fontend/images/payment/5.png" alt="Payment Logo"></a>
             </div>
           </div>
         </div><!-- /.row -->

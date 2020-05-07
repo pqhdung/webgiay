@@ -9,8 +9,6 @@ use Illuminate\Support\Str;
 use App\Producer;
 use App\Category;
 use App\Shoes;
-use App\Colors;
-use App\Size;
 
 class DashboardController extends Controller
 {
@@ -21,20 +19,18 @@ class DashboardController extends Controller
 
     public function AddShoes()
     {
-        $colors = Colors::all();
         $category = Category::all();
-        $size = Size::all();
-        return view('AdminPage.SubAdmin.addshoes', compact('colors','category','size'));
+        return view('AdminPage.SubAdmin.addshoes', compact('category'));
     }
 
     public function postAddShoes()
     {
         $this->validate($this->request,
         [
-            'name'             =>'required',
+            'name'             => 'required',
         ],
         [
-            'name.required'    =>'Bạn chưa nhập tên.',
+            'name.required'    => 'Bạn chưa nhập tên.',
         ]);
         $this->validate($this->request,
         [
@@ -109,8 +105,8 @@ class DashboardController extends Controller
         $shoes->status                  = "1";
         $shoes->product                 = $this->request->description;
         $shoes->id_category             = $this->request->category;
-        $shoes->id_color                = $this->request->color;
-        $shoes->id_size                 = $this->request->size;
+        $shoes->color                = $this->request->color;
+        $shoes->size                 = $this->request->size;
         $shoes->sex                     = $this->request->gender;
         $shoes->inventory               = $this->request->inventory;
         $shoes->price                   = $this->request->price;

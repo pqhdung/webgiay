@@ -3,7 +3,7 @@
       <div class="banner-content">
         <div class="col-sm-offset-6">
           <h2 class="main-title">Classic <span>gentleman</span></h2><!-- /.main-title -->
-          <a href="#" class="btn">Shop Now</a><!-- /.btn -->
+          <a href="all-shoes" class="btn">Shop Now</a><!-- /.btn -->
         </div>
       </div><!-- /.banner-content -->
     </div><!-- /.section-padding -->

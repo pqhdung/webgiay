@@ -2,7 +2,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-3">
-          <h1><a class="navbar-brand hidden-xs" href="./"><img src="fontend/images/logo.png" alt="Site Logo"></a></h1>
+          <h1><a class="navbar-brand hidden-xs" href="/"><img src="../../fontend/images/logo.png" alt="Site Logo"></a></h1>
         </div>
         <div class="col-sm-7">
           <div class="top-search-form">
@@ -24,7 +24,6 @@
                   <option>Others</option>
                 </select>
               </fieldset>
-
               <input type="text" placeholder="Keywords ..." class="form-control">
               <button type="submit" class="btn"><i class="fa fa-search"></i></button>
             </form>  
@@ -32,21 +31,31 @@
         </div>
         <div class="col-sm-2">
           <div class="shop-cart">             
-            <a class="cart-control" href="#" title="View your shopping cart">
+            <a class="cart-control" href="@if(Session::has('cart'))
+            {{route('gio-hang')}}
+            @else
+            #
+            @endif" title="View your shopping cart">
               <i class="ti-bag"></i>
-              <span class="count">3</span>
-              <span>Cart - </span> 
-              <span class="currency">$</span>
-              <span class="amount">345.00</span>
+              <span class="count">
+                @if(Session::has('cart'))
+                    {{Session('cart')->totalQty}}
+                @else
+                        0
+                @endif
+              </span>
+              <span>Cart</span> 
             </a><!-- /.cart-control -->
 
-            <div class="cart-items">
+            {{-- <div class="cart-items">
               <div class="widget_shopping_cart_content">
                 <div class="cart-top">
+                  @if(Session::has('cart'))
+                  @foreach ($product_cart as $product)
                   <div class="item media">
                     <button class="btn"><i class="fa fa-close"></i></button>
                     <div class="item-thumbnail media-left">
-                      <img src="fontend/images/menu/cart/1.png" alt="Item Thimbnail">
+                      <img src="../../fontend/images/menu/cart/1.png" alt="Item Thimbnail">
                     </div><!-- /.item-thumbnail -->
                     <div class="item-details media-body">
                       <div class="rating"><input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/></div><!-- /.rating -->
@@ -60,25 +69,7 @@
                       </div><!-- /.item-price -->
                     </div><!-- /.item-details -->
                   </div><!-- /.item -->
-
-                  <div class="item media">
-                    <button class="btn"><i class="fa fa-close"></i></button>
-                    <div class="item-thumbnail media-left">
-                      <img src="fontend/images/menu/cart/2.png" alt="Item Thimbnail">
-                    </div><!-- /.item-thumbnail -->
-                    <div class="item-details media-body">
-                      <div class="rating"><input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/></div><!-- /.rating -->
-
-                      <h4 class="item-title"><a href="#">Product Name Here</a></h4><!-- /.item-title -->
-                      <div class="item-price">
-                        <div class="item-price">
-                          <span class="currency">$</span>
-                          <span class="price">65</span> 
-                          <span class="item-count">3</span><!-- /.item-count -->
-                        </div><!-- /.item-price -->
-                      </div><!-- /.item-price -->
-                    </div><!-- /.item-details -->
-                  </div><!-- /.item -->
+                  @endforeach
                 </div><!-- /.cart-top -->
 
                 <div class="cart-middle">
@@ -95,6 +86,7 @@
                 </div><!-- /.cart-bottom -->
               </div><!-- /.widget_shopping_cart_content -->
             </div><!-- /.scart-items -->
+            @endif --}}
           </div>
         </div>
       </div><!-- /.row -->
