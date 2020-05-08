@@ -93,7 +93,7 @@
             <h2 class="item-no">{{$num}}</h2><!-- /.item-no -->
             <h3 class="item-title">{{$Shoes2->name}}</h3><!-- /.item-title -->
             <p class="description">
-              {{$Shoes2->product}}
+              {{ \Illuminate\Support\Str::limit(strip_tags($Shoes2->product),50,'...')}}
             </p><!-- /.description -->
             <div class="item-thumbnail"><img class="img-responsive thumb2" src="upload/{{$Shoes2->images}}" alt="Item Thumbnail"></div><!-- /.item-thumbnail -->
             <div class="item-price"><span class="price">{{number_format($Shoes2->price,0, ",",".")}}</span><span class="currency">vnd</span></div><!-- /.item-price -->
