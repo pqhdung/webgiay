@@ -26,7 +26,7 @@
 <section class="page-name-sec page-name-sec-01">
   <div class="section-padding">
     <div class="container">
-      <h3 class="page-title">Portfolio - 4 Column</h3><!-- /.page-title -->
+    <h3 class="page-title">{{$title}}</h3><!-- /.page-title -->
 
       <div class="row">
         <div class="col-sm-6">
@@ -37,9 +37,9 @@
 
         <div class="col-sm-6">
           <ol class="breadcrumb text-right">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Pages</a></li>
-            <li class="active">Portfolio 06</li>
+            <li><a href="/">Home</a></li>
+            <li><a href="#">{{$titleProduct}}</a></li>
+            <li class="active">{{$title}}</li>
           </ol><!-- /.breadcrumb -->
         </div>
 
@@ -116,22 +116,22 @@
           <div class="tab-content">
 
           
-            <div role="tabpanel" class="tab-pane fade active in text-center" id="grid">
+            {{-- <div role="tabpanel" class="tab-pane fade active in text-center" id="grid"> --}}
             @foreach($shoes as $singleshoes)
               <div class="col-sm-3">
                 <div class="item">
                   <div class="item-thumbnail">
-                    <a class="fancybox" href="upload/{{$singleshoes->images}}">
-                      <img class = "thumb" src="upload/{{$singleshoes->images}}" alt="Item Thumbnail">
+                  <a class="fancybox" href="../../upload/{{$singleshoes->images}}">
+                      <img class = "thumb" src="../../upload/{{$singleshoes->images}}" alt="Item Thumbnail">
                     </a>
                   </div><!-- /.item-thumbnail -->
 
                   <div class="item-content">
                     <div class="buttons">
-                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
+                      <button class="add-to-cart"><a href="{{route('themvaogiohang',$singleshoes->id)}}">Add to cart<i class="fa fa-shopping-cart"></i></a></button>
                       <button class="wish-list"><i class="fa fa-heart"></i></button>
                     </div><!-- /.buttons -->
-                    <h3 class="item-title"><a href="#">{{$singleshoes->name}}</a></h3><!-- /.item-title -->
+                    <h3 class="item-title"><a href="/product/{{$singleshoes->id}}/{{str_replace(" ","-",$singleshoes->name)}}">{{$singleshoes->name}}</a></h3><!-- /.item-title -->
                     <div class="item-price">
                       <span class="currency">$</span>
                       <span class="price">{{$singleshoes->price}}</span>
@@ -144,17 +144,17 @@
                 </div><!-- /.item -->
               </div>
               @endforeach    
-            </div><!-- /.tab-pane -->
+            {{-- </div><!-- /.tab-pane --> --}}
              
-            <div role="tabpanel" class="tab-pane fade text-left" id="list">
+            {{-- <div role="tabpanel" class="tab-pane fade text-left" id="list">
             @foreach($shoes as $singleshoes)  
               <div class="item media">
                 <div class="item-thumbnail media-left">
-                  <img class="thumblist" src="upload/{{$singleshoes->images}}" alt="Item Thumbnail">
+                  <img class="thumblist" src="../../upload/{{$singleshoes->images}}" alt="Item Thumbnail">
                 </div><!-- /.item-image -->
 
                 <div class="item-content media-body">
-                  <h3 class="item-title"><a href="#">{{$singleshoes->name}}</a></h3><!-- /.item-title -->
+                  <h3 class="item-title"><a href="/product/{{$singleshoes->id}}/{{str_replace(" ","-",$singleshoes->name)}}">{{$singleshoes->name}}</a></h3><!-- /.item-title -->
 
                   <div class="item-price">
                     <div class="current-price"><span class="currency">$</span><span class="price">{{$singleshoes->price}}</span></div><!-- /.current-price -->
@@ -166,9 +166,9 @@
 
                   <div class="item-bottom">
                     <div class="buttons">
-                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
+                      <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i><a href="{{route('themvaogiohang',$singleshoes->id)}}"></a></button>
                       <button class="wish-list"><i class="fa fa-heart"></i></button>
-                      <a class="fancybox" href="fontend/images/home08/featured/1.jpg"><i class="fa fa-search"></i></a>
+                      <a class="fancybox" href="#"><i class="fa fa-search"></i></a>
                       <button class="compare"><i class="fa fa-exchange"></i></button>
                     </div><!-- /.buttons -->
 
@@ -178,7 +178,7 @@
                 </div><!-- /.item-details -->
               </div><!-- /.item -->
               @endforeach    
-            </div><!-- /.tab-pane -->
+            </div><!-- /.tab-pane --> --}}
             
           </div><!-- /.tab-content -->
        

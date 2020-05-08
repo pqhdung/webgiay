@@ -16,14 +16,6 @@ class Shoes extends Model
         return $this->hasMany('App\Image','id_shoes','id');
     }//relaytionship 1-n Shoes - image
 
-    public function colors(){
-        return $this->hasMany('App\Colors','id_shoes','id');
-    }//relaytionship 1-n Shoes - Colors
-
-    public function size(){
-        return $this->hasMany('App\Size','id_shoes','id');
-    }//relaytionship 1-n Shoes - Size
-
     public function oderDetail(){
         return $this->hasMany('App\OderDetail','id_shoes','id');
     }//relaytionship 1-n Shoes - order detail

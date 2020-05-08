@@ -61,3 +61,23 @@ Route::get('/producer-cv-chuck70s.html', 'CategoryController@showCategoryConvers
 Route::get('/producer-cv-allstar.html', 'CategoryController@showCategoryConverseAllStar');
 
 Route::get('/producer-bitis-hunter.html', 'CategoryController@showCategoryBitisHunter');
+Route::get('/producer.html', 'ProducerController@showAllProducer');
+
+//show tất cả giày
+Route::get('all-shoes','PublicController@getAllShoes');
+
+//thêm sản phẩm vào giỏ hàng
+Route::get('add-to-cart/{id}','CartController@getAddToCart')->name('themvaogiohang');
+
+
+//route show giỏ hàng
+Route::get('show-cart','CartController@ShowAllCart')->name('gio-hang');
+
+//route get category theo id_category
+Route::get('category/{id}/{name}', 'PublicController@getCategory');
+
+//route get producer theo id_producer
+Route::get('producer/{id}/{name}', 'PublicController@getProducer');
+
+//show chi tiết sản phẩm
+Route::get('product/{id}/{name}','PublicController@getProductDetail');
