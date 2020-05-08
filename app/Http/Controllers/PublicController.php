@@ -23,7 +23,7 @@ class PublicController extends Controller
 
     public function getAllShoes(){
         $producer = Producer::select('id','name_producer')->get();
-        $shoes    = Shoes::select('id','name','product','price','images')->inRandomOrder()->get();
+        $shoes    = Shoes::select('id','name','product','price','images')->orderBy('id','desc')->get();
         $title = "All Shoes";
         $titleProduct = $title;
         return view('PublicPage.SubShowAll.producer',['producer'=>$producer,'shoes'=>$shoes, 'title'=> $title,'titleProduct'=>$titleProduct]);
@@ -62,6 +62,8 @@ class PublicController extends Controller
 
         $shoes = Shoes::find($id);
 
-        return view('PublicPage.SubShowAll.productShoes',['producer'=>$producer,'title'=> $title,'shoes'=>$shoes,  ]);
+        $allShoes = Shoes::where('name','=',$shoes->name)->orderBy('id')->get();
+
+        return view('PublicPage.SubShowAll.productShoes',['producer'=>$producer,'title'=> $title,'shoes'=>$shoes, 'allShoes'=>$allShoes]);
     }
 }

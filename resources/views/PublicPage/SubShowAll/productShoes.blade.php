@@ -11,6 +11,29 @@
     background-size: cover;
     object-fit: cover;
 }
+.thumb1 {
+    width: 3cm;
+    height: 3cm;
+    background-color: #3e3e3e;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.column1 {
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row1::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 </style>
 <section class="page-name-sec page-name-sec-01">
     <div class="section-padding">
@@ -101,14 +124,6 @@
                     <span id="count" class="count">0</span>
                     <button id="item-minus" class="item-minus"><i class="ti-minus"></i></button>
                   </div><!-- /.cart-counter -->
-  
-                  <select data-select-like-alignement="never" class="color drop-select">
-                    <option value="">Color</option>
-                    <option value="2">{{$shoes->color}}</option>
-                    <option value="3">Gray</option>
-                    <option value="4">Red</option>
-                    <option value="5">Blue</option>
-                  </select>
 
                 <select data-select-like-alignement="never" class="size drop-select">
                   <option value="">Size</option>
@@ -120,9 +135,16 @@
                 </select>
 
                 <p class="description">
-                  Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam
+                  COLORS
                 </p><!-- /.short-description -->
-
+                <div class="row1">
+                  @foreach ($allShoes as $all)
+                  <div class="column1">
+                    <a href="#"><img class="thumb1" src="../../upload/{{$all->images}}" alt=""></a>
+                  </div>
+                  @endforeach
+                </div>
+                <div class="clearfix"></div>
                 <div class="buttons">
                   <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
                   <button class="wish-list"><i class="fa fa-heart"></i></button>

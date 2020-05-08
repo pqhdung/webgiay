@@ -116,7 +116,7 @@
           <div class="tab-content">
 
           
-            <div role="tabpanel" class="tab-pane fade active in text-center" id="grid">
+            {{-- <div role="tabpanel" class="tab-pane fade active in text-center" id="grid"> --}}
             @foreach($shoes as $singleshoes)
               <div class="col-sm-3">
                 <div class="item">
@@ -144,9 +144,9 @@
                 </div><!-- /.item -->
               </div>
               @endforeach    
-            </div><!-- /.tab-pane -->
+            {{-- </div><!-- /.tab-pane --> --}}
              
-            <div role="tabpanel" class="tab-pane fade text-left" id="list">
+            {{-- <div role="tabpanel" class="tab-pane fade text-left" id="list">
             @foreach($shoes as $singleshoes)  
               <div class="item media">
                 <div class="item-thumbnail media-left">
@@ -178,7 +178,7 @@
                 </div><!-- /.item-details -->
               </div><!-- /.item -->
               @endforeach    
-            </div><!-- /.tab-pane -->
+            </div><!-- /.tab-pane --> --}}
             
           </div><!-- /.tab-content -->
        
