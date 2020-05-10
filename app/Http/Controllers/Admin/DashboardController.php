@@ -115,4 +115,12 @@ class DashboardController extends Controller
 
         return redirect('/admins')->with('mess','Thêm thành công.');
     }
+
+    public function ShowAllShoes()
+    {
+        $shoes = Shoes::all();
+        $category = Category::all();
+        return view('AdminPage.SubAdmin.allshoes',['shoes'=>$shoes,'category'=>$category]);
+    }
+    
 }

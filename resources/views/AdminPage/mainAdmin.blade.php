@@ -23,6 +23,7 @@
         <link href="../../backend/assets/css/style.css" rel="stylesheet" type="text/css" />
 
         <script src="../../backend/assets/js/modernizr.min.js"></script>
+        
 
     </head>
 
@@ -75,5 +76,30 @@
 
         <script src="../../backend/plugins/bootstrap-fileupload/bootstrap-fileupload.js"></script>
 
+
+        <!-- Required datatable js -->
+        <script src="../../backend/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="../../backend/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+        <!-- Buttons examples -->
+        <script src="../../backend/plugins/datatables/dataTables.buttons.min.js"></script>
+        <script src="../../backend/plugins/datatables/buttons.bootstrap4.min.js"></script>
+        <script src="../../backend/plugins/datatables/jszip.min.js"></script>
+        <script src="../../backend/plugins/datatables/pdfmake.min.js"></script>
+        <script src="../../backend/plugins/datatables/vfs_fonts.js"></script>
+        <script src="../../backend/plugins/datatables/buttons.html5.min.js"></script>
+        <script src="../../backend/plugins/datatables/buttons.print.min.js"></script>
+        <!-- Responsive examples -->
+        <script src="../../backend/plugins/datatables/dataTables.responsive.min.js"></script>
+        <script src="../../backend/plugins/datatables/responsive.bootstrap4.min.js"></script>
+
+
+
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#datatable').DataTable();
+            } );
+
+        </script>
     </body>
 </html>
