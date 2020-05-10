@@ -116,12 +116,12 @@
           <div class="tab-content">
 
           
-            {{-- <div role="tabpanel" class="tab-pane fade active in text-center" id="grid"> --}}
+            <div role="tabpanel" class="tab-pane fade active in text-center" id="grid">
             @foreach($shoes as $singleshoes)
               <div class="col-sm-3">
                 <div class="item">
                   <div class="item-thumbnail">
-                  <a class="fancybox" href="../../upload/{{$singleshoes->images}}">
+                  <a class="" href="/product/{{$singleshoes->id}}/{{str_replace(" ","-",$singleshoes->name)}}">
                       <img class = "thumb" src="../../upload/{{$singleshoes->images}}" alt="Item Thumbnail">
                     </a>
                   </div><!-- /.item-thumbnail -->
@@ -133,8 +133,7 @@
                     </div><!-- /.buttons -->
                     <h3 class="item-title"><a href="/product/{{$singleshoes->id}}/{{str_replace(" ","-",$singleshoes->name)}}">{{$singleshoes->name}}</a></h3><!-- /.item-title -->
                     <div class="item-price">
-                      <span class="currency">$</span>
-                      <span class="price">{{$singleshoes->price}}</span>
+                      <span class="price">{{number_format($singleshoes->price,0, ",",".")}} VNĐ</span>
                     </div><!-- /.item-price -->
                     <div class="rating">
                       <input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="5"/>
@@ -144,9 +143,9 @@
                 </div><!-- /.item -->
               </div>
               @endforeach    
-            {{-- </div><!-- /.tab-pane --> --}}
+            </div><!-- /.tab-pane -->
              
-            {{-- <div role="tabpanel" class="tab-pane fade text-left" id="list">
+            <div role="tabpanel" class="tab-pane fade text-left" id="list">
             @foreach($shoes as $singleshoes)  
               <div class="item media">
                 <div class="item-thumbnail media-left">
@@ -157,7 +156,7 @@
                   <h3 class="item-title"><a href="/product/{{$singleshoes->id}}/{{str_replace(" ","-",$singleshoes->name)}}">{{$singleshoes->name}}</a></h3><!-- /.item-title -->
 
                   <div class="item-price">
-                    <div class="current-price"><span class="currency">$</span><span class="price">{{$singleshoes->price}}</span></div><!-- /.current-price -->
+                    <div class="current-price"><span class="price">{{number_format($singleshoes->price,0, ",",".")}} VNĐ</span></div><!-- /.current-price -->
                   </div><!-- /.item-price -->
 
                   <p class="description">
@@ -178,7 +177,7 @@
                 </div><!-- /.item-details -->
               </div><!-- /.item -->
               @endforeach    
-            </div><!-- /.tab-pane --> --}}
+            </div><!-- /.tab-pane -->
             
           </div><!-- /.tab-content -->
        

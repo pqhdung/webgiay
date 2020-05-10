@@ -57,7 +57,7 @@
                 <p class="description">
                   {{$Shoes->product}}
                 </p><!-- /.description -->
-                <a href="#" class="btn">Start shopping now</a><!-- /.btn -->
+                <a href="/product/{{$Shoes->id}}/{{str_replace(" ","-",$Shoes->name)}}" class="btn">Start shopping now</a><!-- /.btn -->
                 <div class="item-price"><span class="currency"></span><span class="price">{{number_format($Shoes->price,0, ",",".")}}</span> vnd</div><!-- /.item-price -->
               </div><!-- /.item-details -->
             </div>
@@ -97,7 +97,7 @@
             </p><!-- /.description -->
             <div class="item-thumbnail"><img class="img-responsive thumb2" src="upload/{{$Shoes2->images}}" alt="Item Thumbnail"></div><!-- /.item-thumbnail -->
             <div class="item-price"><span class="price">{{number_format($Shoes2->price,0, ",",".")}}</span><span class="currency">vnd</span></div><!-- /.item-price -->
-            <a href="#" class="btn">Start shopping now</a><!-- /.btn -->
+            <a href="/product/{{$Shoes2->id}}/{{str_replace(" ","-",$Shoes2->name)}}" class="btn">Start shopping now</a><!-- /.btn -->
           </div><!-- /.item -->
         </div>
         <?php $num++; ?>
@@ -132,7 +132,7 @@
           </p><!-- /.description -->
           <div class="item-thumbnail"><img class="img-responsive thumb3" src="upload/{{$Shoes3->images}}" alt="Item Thumbnail"></div><!-- /.item-thumbnail -->
           <div class="item-price"><span class="price">{{number_format($Shoes3->price,0, ",",".")}}</span><span class="currency">vnd</span></div><!-- /.item-price -->
-          <a href="#" class="btn">Start shopping now</a><!-- /.btn -->
+          <a href="/product/{{$Shoes3->id}}/{{str_replace(" ","-",$Shoes3->name)}}" class="btn">Start shopping now</a><!-- /.btn -->
         </div><!-- /.item -->
       </div>
       <?php $num++; ?>
