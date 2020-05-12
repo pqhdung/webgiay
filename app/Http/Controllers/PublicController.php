@@ -30,27 +30,26 @@ class PublicController extends Controller
     }
 
     public function getCategory($id, $name){
-        $shoes = Shoes::where('id_category',"$id")->get();
+        // $shoes = Shoes::where('id_category',"$id")->get();
+        // dd($shoes);
         $producer = Producer::select('id','name_producer')
         ->get();
         $category = Category::find($id);
+        $shoes = $category->shoes;
         $titleProduct = $category->Producer->name_producer;
         $title = str_replace("-"," ", $name);
         return view('PublicPage.SubShowAll.producer', ['producer'=>$producer,'shoes'=>$shoes, 'title'=> $title,'titleProduct'=>$titleProduct]);
     }
 
     public function getProducer($id, $name){
-        $shoes = DB::table('Shoes')
-            ->join('category', 'category.id', '=','shoes.id_category')
-            ->join('producer','producer.id','=','category.id_producer')
-            ->whereRaw( "$id".'='.'producer.id')
-            ->get();
-
+        $producerShoes = Producer::find($id);
+        // $cate = $producerShoes->category;
+        // dd($cate);
         $titleProduct = str_replace("-"," ", $name);
 
         $producer = Producer::select('id','name_producer')
         ->get(); //trả về cho show menu
-        return view('PublicPage.SubShowAll.product2', ['producer'=>$producer,'shoes'=>$shoes,'titleProduct'=>$titleProduct]);
+        return view('PublicPage.SubShowAll.product2', ['producer'=>$producer,'producerShoes'=>$producerShoes,'titleProduct'=>$titleProduct]);
     }
 
     public function getProductDetail($id,$name){

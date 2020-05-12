@@ -116,7 +116,8 @@
 
           
             <div role="tabpanel" class="tab-pane fade active in text-center" id="grid">
-            @foreach($shoes as $singleshoes)
+            @foreach($producerShoes->category as $cate)
+            @foreach($cate->shoes as $singleshoes)
               <div class="col-sm-3">
                 <div class="item">
                   <div class="item-thumbnail">
@@ -142,10 +143,12 @@
                 </div><!-- /.item -->
               </div>
               @endforeach    
+              @endforeach    
             </div><!-- /.tab-pane -->
              
             <div role="tabpanel" class="tab-pane fade text-left" id="list">
-            @foreach($shoes as $singleshoes)  
+            @foreach($producerShoes->category as $cate)
+            @foreach($cate->shoes as $singleshoes)
               <div class="item media">
                 <div class="item-thumbnail media-left">
                   <img class="thumblist" src="../../upload/{{$singleshoes->images}}" alt="Item Thumbnail">
@@ -176,6 +179,8 @@
                 </div><!-- /.item-details -->
               </div><!-- /.item -->
               @endforeach    
+              @endforeach    
+
             </div><!-- /.tab-pane -->
             
           </div><!-- /.tab-content -->

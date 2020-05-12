@@ -71,10 +71,8 @@
                 <td class="unit-price"><span class="price">{{number_format($cartitem['price'],0, ",",".")}}</span><span class="currency"> vnd</span></td>
 
                 <td class="order-count">
-                  <div class="cart-counter-1">
-                    <button class="item-minus"><i class="ti-minus"></i></button>
-                    <span class="item-count-1">{{$cartitem['Qty']}}</span>
-                    <button class="item-plus"><i class="ti-plus"></i></button>
+                  <div class=" col-1 col-sm-2 col-md-2">
+                    <input class="form-control" type="number" value="{{$cartitem['Qty']}}" min="0" max="10" step="1"/>
                   </div><!-- /.cart-counter -->
                 </td>
 
@@ -153,5 +151,6 @@
         </div><!-- /.billing-table --> --}}
       </div><!-- /.contaier -->
     </div><!-- /.section-padding -->
+    
   </section><!-- /.cart-section -->
 @endsection
