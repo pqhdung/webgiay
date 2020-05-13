@@ -81,3 +81,6 @@ Route::get('producer/{id}/{name}', 'PublicController@getProducer');
 
 //show chi tiết sản phẩm
 Route::get('product/{id}/{name}','PublicController@getProductDetail');
+
+//Cập nhật giỏ hàng
+Route::get('update-to-cart/{id}/{Qty}','CartController@getUpdatetocart');

@@ -65,4 +65,7 @@ class PublicController extends Controller
 
         return view('PublicPage.SubShowAll.productShoes',['producer'=>$producer,'title'=> $title,'shoes'=>$shoes, 'allShoes'=>$allShoes]);
     }
+
+    
+
 }

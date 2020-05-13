@@ -115,6 +115,6 @@
 <script>
     $("input[type='number']").inputSpinner()
 </script>
-
+@yield('script')
 </body>
 </html>
