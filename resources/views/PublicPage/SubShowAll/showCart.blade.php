@@ -164,7 +164,6 @@
           var idsp = $(this).attr("data-key");
           // alert(qty);
           // alert(idsp);
-
           $.get("update-to-cart/" + idsp + "/" + qty + "/", function (data) {
               // $(".tien").append(data);
 

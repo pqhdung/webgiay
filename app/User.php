@@ -37,8 +37,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function orders(){
-        return $this->hasMany('App\Orders','id_user','id');
-    }//relaytionship 1-n user - order
+    // public function orders(){
+    //     return $this->hasMany('App\Orders','id_user','id');
+    // }//relaytionship 1-n user - order
 
 }
