@@ -49,7 +49,7 @@
                 <th>UNIT PRICE</th>
                 <th>QUANTITY</th>
                 <th>SUBTOTAL</th>
-                <th></th>
+                <th>UPDATE</th>
               </tr>
               
               @foreach ($product_cart as $cartitem)
@@ -63,24 +63,24 @@
                   <div class="item-details">
                     <h3 class="item-title">{{$cartitem['item']['name']}}</h3>
                     <div class="product-meta">
-                      <span class="meta-id"> Color: <span class="meta-about"></span>{{$cartitem['Color']}}</span>
-                    <span class="meta-id"> Size: <span class="meta-about"></span>{{$cartitem['Size']}}</span>
+                      <span class="meta-id"> Color: <span class="meta-about"></span>{{$cartitem['item']['color']}}</span>
+                    <span class="meta-id"> Size: <span class="meta-about"></span>{{$cartitem['item']['size']}}</span>
                     </div><!-- /.product-meta -->
                   </div><!-- /.item-details -->
                 </td>
-                <td class="unit-price"><span class="price">{{number_format($cartitem['price'],0, ",",".")}}</span><span class="currency"> vnd</span></td>
-
-                <td class="order-count">
-                  <div class="cart-counter-1">
-                    <button class="item-minus"><i class="ti-minus"></i></button>
-                    <span class="item-count-1">{{$cartitem['Qty']}}</span>
-                    <button class="item-plus"><i class="ti-plus"></i></button>
-                  </div><!-- /.cart-counter -->
+                <td class="unit-price"><span class="price">{{number_format($cartitem['price'],0, ",",".")}}</span><span class="currency"> vnd</span>
                 </td>
 
-                <td class="total-price"><span class="price">{{number_format($cartitem['price']*$cartitem['Qty'],0, ",",".")}}</span><span class="currency"> vnd</span></td>
+                <td class="order-count">
+                  <div class=" col-1 col-sm-2 col-md-2">
+                    <input class="form-control" type="number" id="itemQty" value="{{$cartitem['Qty']}}" min="0" max="10" step="1"/>
+                  </div><!-- /.cart-counter -->
+                </td>
+                
 
-                <td class="edit"><button><i class="ti-pencil"></i></button></td>
+                <td class="total-price tien"><span class="price">{{number_format($cartitem['price']*$cartitem['Qty'],0, ",",".")}}</span><span class="currency"> vnd</span></td>
+
+                <td class="edit"><a class="btn btn-success" id="updateCart" data-key="{{$cartitem['item']['id']}}"><i class="ti-pencil" ></i></a></td>
               </tr>  
               @endforeach            
 
@@ -154,4 +154,28 @@
       </div><!-- /.contaier -->
     </div><!-- /.section-padding -->
   </section><!-- /.cart-section -->
+@endsection
+
+@section('script')
+<script>
+  $(document).ready(function () {
+      $("#updateCart").click(function () {
+          var qty = $(this).parents("tr").find("#itemQty").val();
+          var idsp = $(this).attr("data-key");
+          // alert(qty);
+          // alert(idsp);
+          $.get("update-to-cart/" + idsp + "/" + qty + "/", function (data) {
+              // $(".tien").append(data);
+
+              if (data == 1) {
+                  alert("update thành công");
+                  location.reload();
+              } else {
+                  alert("update thất bại");
+                  location.reload();
+              }
+          });
+      });
+  });
+</script>
 @endsection

@@ -111,7 +111,10 @@
 
 
   </script>
-
-
+<script src="../../fontend/assets/js/bootstrap-input-spinner.js"></script>
+<script>
+    $("input[type='number']").inputSpinner()
+</script>
+@yield('script')
 </body>
 </html>

@@ -17,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('category','ApiCategoryController@index');
+
+Route::get('category/{id}','ApiCategoryController@CategoryById');
+
+Route::post('category','ApiCategoryController@SaveCategory');
+
+Route::put('category/{category}', 'ApiCategoryController@UpdateCategory');
