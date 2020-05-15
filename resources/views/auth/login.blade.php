@@ -1,6 +1,20 @@
 @extends('PublicPage.showAll')
-@section('content')
-
+@section('main')
+@if (count($errors) > 0)
+        <div class="alert alert-danger">
+          Thông tin đăng ký không đầy đủ, bạn cần chỉnh sửa như sau:
+          <ul>
+              @foreach ($errors->all() as $error)
+                  <li>{{ $error }}</li>
+              @endforeach
+          </ul>
+        </div>
+    @endif
+    @if (isset($message))
+      <div class="alert alert-success">
+      {{ $message }}
+      </div>
+    @endif
 
 <section class="page-name-sec page-name-sec-01">
 
@@ -33,21 +47,7 @@
     <div class="section-padding">
       <div class="container">
         <div class="row">
-        @if (count($errors) > 0)
-        <div class="alert alert-danger">
-          Thông tin đăng ký không đầy đủ, bạn cần chỉnh sửa như sau:
-          <ul>
-              @foreach ($errors->all() as $error)
-                  <li>{{ $error }}</li>
-              @endforeach
-          </ul>
-        </div>
-    @endif
-    @if (isset($message))
-      <div class="alert alert-success">
-      {{ $message }}
-      </div>
-    @endif
+      
           <div class="col-md-5">
             <div class="sign-in bg-gray">
               <h2 class="title">Have an account? Log in</h2>

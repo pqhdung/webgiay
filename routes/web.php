@@ -85,4 +85,4 @@ Route::get('product/{id}/{name}','PublicController@getProductDetail');
 //đăng ký / đăng nhập user
 Auth::routes();
 
-Route::get('/registerlogin', 'HomeController@showRegisterLogin');//->name('login');
+Route::get('/registerlogin', 'HomeController@showRegisterLogin')->name('login');
