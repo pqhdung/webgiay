@@ -81,3 +81,8 @@ Route::get('producer/{id}/{name}', 'PublicController@getProducer');
 
 //show chi tiết sản phẩm
 Route::get('product/{id}/{name}','PublicController@getProductDetail');
+
+//đăng ký / đăng nhập user
+Auth::routes();
+
+Route::get('/registerlogin', 'HomeController@showRegisterLogin');//->name('login');

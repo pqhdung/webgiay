@@ -1,3 +1,4 @@
+
 <nav id="main-menu" class="menu collapse navbar-collapse pull-right">
     <ul class="nav navbar-nav">
       <li class="menu-item menu-item-has-children active">
@@ -6,7 +7,7 @@
           <li class="menu-item"><a href="index-01.html">Home 01</a></li>
         </ul>
       </li>
-      @foreach ($producer as $Producer)
+      @foreach ($errors as $Producer)
       <li class="menu-item menu-item-has-children menu-item-has-mega-menu">
       <a href="/producer/{{$Producer->id}}/{{str_replace(" ","-",$Producer->name_producer)}}">{{$Producer->name_producer}}</a>
         <ul class="mega-menu sub-menu">
