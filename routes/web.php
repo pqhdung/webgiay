@@ -84,3 +84,8 @@ Route::get('product/{id}/{name}','PublicController@getProductDetail');
 
 //Cập nhật giỏ hàng
 Route::get('update-to-cart/{id}/{Qty}','CartController@getUpdatetocart');
+
+
+Route::get('/login', ['as' => 'getlogin', 'uses' => 'UserController@index']);
+Route::post('/register', ['as' => 'postregister', 'uses' => 'UserController@postUserRegister']);
+Route::post('/login', ['as' => 'postlogin', 'uses' => 'UserController@userpostLogin']);
