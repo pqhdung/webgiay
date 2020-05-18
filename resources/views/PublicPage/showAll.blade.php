@@ -44,16 +44,13 @@
 
     @include('PublicPage.SubShowAll.menuShow')<!-- /.header-bottom  menu-->
 
+    
+
   </header><!-- /#masthead -->
 
   @yield('main')<!--/.portfolio-->
 
-
-
-
   @include('PublicPage.SubShowAll.padding')<!-- /.section-padding -->
-
-
 
   @include('PublicPage.SubShowAll.footer')
 

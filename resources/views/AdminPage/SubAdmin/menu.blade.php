@@ -139,35 +139,35 @@
                             <div class="slimscroll" style="max-height: 190px;">
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon"><img src="../backend/assets/images/users/avatar-2.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                    <div class="notify-icon"><img src="../../backend/assets/images/users/avatar-2.jpg" class="img-fluid rounded-circle" alt="" /> </div>
                                     <p class="notify-details">Cristina Pride</p>
                                     <p class="text-muted font-13 mb-0 user-msg">Hi, How are you? What about our next meeting</p>
                                 </a>
 
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon"><img src="../backend/assets/images/users/avatar-3.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                    <div class="notify-icon"><img src="../../backend/assets/images/users/avatar-3.jpg" class="img-fluid rounded-circle" alt="" /> </div>
                                     <p class="notify-details">Sam Garret</p>
                                     <p class="text-muted font-13 mb-0 user-msg">Yeah everything is fine</p>
                                 </a>
 
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon"><img src="../backend/assets/images/users/avatar-4.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                    <div class="notify-icon"><img src="../../backend/assets/images/users/avatar-4.jpg" class="img-fluid rounded-circle" alt="" /> </div>
                                     <p class="notify-details">Karen Robinson</p>
                                     <p class="text-muted font-13 mb-0 user-msg">Wow that's great</p>
                                 </a>
 
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon"><img src="../backend/assets/images/users/avatar-5.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                    <div class="notify-icon"><img src="../../backend/assets/images/users/avatar-5.jpg" class="img-fluid rounded-circle" alt="" /> </div>
                                     <p class="notify-details">Sherry Marshall</p>
                                     <p class="text-muted font-13 mb-0 user-msg">Hi, How are you? What about our next meeting</p>
                                 </a>
 
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon"><img src="../backend/assets/images/users/avatar-6.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                    <div class="notify-icon"><img src="../../backend/assets/images/users/avatar-6.jpg" class="img-fluid rounded-circle" alt="" /> </div>
                                     <p class="notify-details">Shawn Millard</p>
                                     <p class="text-muted font-13 mb-0 user-msg">Yeah everything is fine</p>
                                 </a>
@@ -184,7 +184,7 @@
                     <li class="dropdown notification-list">
                         <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button"
                            aria-haspopup="false" aria-expanded="false">
-                            <img src="../backend/assets/images/users/avatar-1.jpg" alt="user" class="rounded-circle"> <span class="ml-1 pro-user-name">Samuel <i class="mdi mdi-chevron-down"></i> </span>
+                            <img src="../../backend/assets/images/users/avatar-1.jpg" alt="user" class="rounded-circle"> <span class="ml-1 pro-user-name">Samuel <i class="mdi mdi-chevron-down"></i> </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                             <!-- item-->
@@ -245,6 +245,11 @@
                             <li><a href="/admins/shoes/add-shoes">New Shoes</a></li>
                         </ul>
                     </li>
+                    
+                    <li class="has-submenu">
+                        <a href="/admins/shoes/all-shoes"><i class="fi-briefcase"></i>All shoes</a> 
+                    </li>
+                    
 
                     <li class="has-submenu">
                         <a href="#"><i class="fi-box"></i>Components</a>

@@ -1,3 +1,4 @@
+
 <nav id="main-menu" class="menu collapse navbar-collapse pull-right">
     <ul class="nav navbar-nav">
       <li class="menu-item menu-item-has-children active">
@@ -23,7 +24,7 @@
                   <a href="#">
                     <img src="../../fontend/images/menu/shop.png" alt="Image">
                     <h3 class="content-title">
-                      {{$Producer->name_producer}}
+                      {{$Producer->nameproducer}}
                     </h3>
                   </a>
                 </div><!-- /.menu-content -->
