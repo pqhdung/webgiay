@@ -17,7 +17,7 @@ class PublicController extends Controller
         $producer = Producer::select('id','name_producer')->get();
         $shoes    = Shoes::select('id','name','product','price','images')->orderBy('id','desc')->offset(0)->take(4)->get();
         $shoes2    = Shoes::select('id','name','product','price','images')->orderBy('id','desc')->offset(4)->take(2)->get();
-        $shoes3    = Shoes::select('id','name','product','price','images')->orderBy('id','desc')->offset(6)->take(6)->get();
+        $shoes3    = Shoes::select('id','name','product','price','images')->orderBy('id','desc')->offset(6)->take(3)->get();
         return view('PublicPage.SubPage.contents',['producer'=>$producer,'shoes'=>$shoes,'shoes2'=>$shoes2,'shoes3'=>$shoes3]);
     }
 
@@ -60,7 +60,7 @@ class PublicController extends Controller
         $title = str_replace("-"," ",$name);
 
         $shoes = Shoes::find($id);
-
+        
         $allShoes = Shoes::where('name','=',$shoes->name)->orderBy('id')->get();
 
         return view('PublicPage.SubShowAll.productShoes',['producer'=>$producer,'title'=> $title,'shoes'=>$shoes, 'allShoes'=>$allShoes]);
