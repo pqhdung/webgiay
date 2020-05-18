@@ -17,7 +17,7 @@ class PublicController extends Controller
         $producer = Producer::select('id','name_producer')->get();
         $shoes    = Shoes::select('id','name','product','price','images')->orderBy('id','desc')->offset(0)->take(4)->get();
         $shoes2    = Shoes::select('id','name','product','price','images')->orderBy('id','desc')->offset(4)->take(2)->get();
-        $shoes3    = Shoes::select('id','name','product','price','images')->orderBy('id','desc')->offset(6)->take(6)->get();
+        $shoes3    = Shoes::select('id','name','product','price','images')->orderBy('id','desc')->offset(6)->take(3)->get();
         return view('PublicPage.SubPage.contents',['producer'=>$producer,'shoes'=>$shoes,'shoes2'=>$shoes2,'shoes3'=>$shoes3]);
     }
 
@@ -30,27 +30,26 @@ class PublicController extends Controller
     }
 
     public function getCategory($id, $name){
-        $shoes = Shoes::where('id_category',"$id")->get();
+        // $shoes = Shoes::where('id_category',"$id")->get();
+        // dd($shoes);
         $producer = Producer::select('id','name_producer')
         ->get();
         $category = Category::find($id);
+        $shoes = $category->shoes;
         $titleProduct = $category->Producer->name_producer;
         $title = str_replace("-"," ", $name);
         return view('PublicPage.SubShowAll.producer', ['producer'=>$producer,'shoes'=>$shoes, 'title'=> $title,'titleProduct'=>$titleProduct]);
     }
 
     public function getProducer($id, $name){
-        $shoes = DB::table('Shoes')
-            ->join('category', 'category.id', '=','shoes.id_category')
-            ->join('producer','producer.id','=','category.id_producer')
-            ->whereRaw( "$id".'='.'producer.id')
-            ->get();
-
+        $producerShoes = Producer::find($id);
+        // $cate = $producerShoes->category;
+        // dd($cate);
         $titleProduct = str_replace("-"," ", $name);
 
         $producer = Producer::select('id','name_producer')
         ->get(); //trả về cho show menu
-        return view('PublicPage.SubShowAll.product2', ['producer'=>$producer,'shoes'=>$shoes,'titleProduct'=>$titleProduct]);
+        return view('PublicPage.SubShowAll.product2', ['producer'=>$producer,'producerShoes'=>$producerShoes,'titleProduct'=>$titleProduct]);
     }
 
     public function getProductDetail($id,$name){
@@ -61,9 +60,12 @@ class PublicController extends Controller
         $title = str_replace("-"," ",$name);
 
         $shoes = Shoes::find($id);
-
+        
         $allShoes = Shoes::where('name','=',$shoes->name)->orderBy('id')->get();
 
         return view('PublicPage.SubShowAll.productShoes',['producer'=>$producer,'title'=> $title,'shoes'=>$shoes, 'allShoes'=>$allShoes]);
     }
+
+    
+
 }

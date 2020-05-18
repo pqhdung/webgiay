@@ -14,9 +14,7 @@ class CartController extends Controller
 {
     public function getAddToCart(Request $req, $id){
         $shoes = Shoes::find($id);
-
         $color = $shoes->color;
-
         $size = $shoes->size;
         $oldCart = Session('cart')?Session::get('cart'):null;
         $cart = new Cart($oldCart);
@@ -38,5 +36,15 @@ class CartController extends Controller
             'totalQty'=>$cart->totalQty,
             'producer'=>$producer
             ]);
+    }
+
+    public function getUpdatetocart(Request $req, $id, $Qty){
+        $shoes = Shoes::find($id);
+        $oldCart = Session('cart')?Session::get('cart'):null;
+        $cart = new Cart($oldCart);
+        $cart->update($id, $Qty);
+        $req->session()->put('cart',$cart);
+        echo 1;
+        //return redirect('gio-hang');
     }
 }

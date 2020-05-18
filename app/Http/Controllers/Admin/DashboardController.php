@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use App\Http\Requests\LoginRequest;
+use Auth;
+use App\User;
 
 use App\Producer;
 use App\Category;
