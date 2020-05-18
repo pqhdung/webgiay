@@ -40,7 +40,7 @@
           <div class="my-account dropdown">
             <a href="#">My Account<i class="ti-user"></i></a>
             <ul class="unsorted-list">
-              <li><a href="register.html">Log In</a></li>
+              <li><a href="/login">Log In</a></li>
               <li><a href="#">My Profile</a></li>
               <li><a href="#">My Wishlist</a></li>
               <li><a href="cart.html">My Cart</a></li>
