@@ -1,11 +1,11 @@
 @extends('PublicPage.showAll')
 @section('main')
 <style>
+  /* img-fluid cover image*/ 
   .thumb {
     width: 551px;
     height: 468.48px;
     background-color: #3e3e3e;
-    background-image: none;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -74,6 +74,40 @@
                   <div role="tabpanel" class="tabpanel">
 
                     <div class="tab-content">
+                      <?php $i=0; ?>
+                      @foreach($shoes->image as $img_detail)
+                        <div role="tabpanel"
+                        @if($i==0)
+                        class=" tab-pane in active"
+                        @else
+                        class=" tab-pane fade"
+                        @endif
+                    id="item{{$i}}">
+                           <img class="thumb" src="../../upload/{{$img_detail->url}}" alt="Product Image"> 
+                        </div>
+                        <?php $i++; ?>
+                      @endforeach
+                     
+                    </div><!-- /.tab-content -->
+
+                    <ul class="nav nav-tabs" role="tablist">
+                      <?php $i=0; ?>
+                      @foreach($shoes->image as $img_detail)
+                        <li role="presentation" 
+                       @if($i==0)
+                       class="active"
+                       @else
+                       class=""
+                       @endif
+                        >
+                    <a href="#item{{$i}}" aria-controls="item{{$i}}" role="tab" data-toggle="tab" aria-expanded="true"><img src="../../upload/{{$img_detail->url}}" alt="Product Image">
+                          </a>
+                        </li>
+                        <?php $i++; ?>
+                      @endforeach
+                    </ul><!-- /.nav-tabs -->
+
+                    {{-- <div class="tab-content">
                       <div role="tabpanel" class="tab-pane in active" id="item1">
                       <img class="thumb" src="../../upload/{{$shoes->images}}" alt="Product Image"> 
                       </div>
@@ -93,7 +127,7 @@
                       <li role="presentation" class=""><a href="#item2" aria-controls="item2" role="tab" data-toggle="tab" aria-expanded="false"><img src="../../fontend/images/shop/thumb/5.png" alt="Product Image"></a></li>
                       <li role="presentation" class=""><a href="#item3" aria-controls="item3" role="tab" data-toggle="tab" aria-expanded="true"><img src="../../fontend/images/shop/thumb/6.png" alt="Product Image"></a></li>
                       <li role="presentation" class=""><a href="#item4" aria-controls="item4" role="tab" data-toggle="tab" aria-expanded="true"><img src="../../fontend/images/shop/thumb/7.png" alt="Product Image"></a></li>
-                    </ul><!-- /.nav-tabs -->
+                    </ul><!-- /.nav-tabs --> --}}
 
                   </div>
                 </div><!-- /.item-gallery -->
