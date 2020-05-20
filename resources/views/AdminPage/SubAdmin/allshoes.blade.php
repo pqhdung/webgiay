@@ -55,7 +55,7 @@
                                     <th>Inventory</th>
                                     <th>Price</th>
                                     <th>Images</th>
-                                    <th>Updated_at</th>
+                                    <th>Add Image</th>
                                     <th>Created_at</th>
                                    
                                 </tr>
@@ -92,7 +92,7 @@
                                     <td>{{$singleshoes ->inventory}}</td>
                                     <td>{{$singleshoes ->price}}</td>
                                     <td><img class="thumb" src="../../upload/{{$singleshoes->images}}" alt="Item Thumbnail"></td>
-                                    <td>{{$singleshoes ->updated_at}}</td>
+                                    <td><a href="upload/{{$singleshoes->id}}" class="btn btn-primary"> Thêm Ảnh</a></td>
                                     <td>{{$singleshoes ->created_at}}</td>
 
                                     

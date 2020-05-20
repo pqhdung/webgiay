@@ -13,6 +13,12 @@ Route::group(['middleware' => 'checkAdminLogin', 'prefix' => '/'], function() {
     Route::group(["prefix"=>"shoes"],function(){
         Route::get('add-shoes','DashboardController@AddShoes');
         Route::post('add-shoes','DashboardController@postAddShoes');
+        Route::get('all-shoes','DashboardController@ShowAllShoes');
+
+        Route::get('upload/{id}','ImagesShoesController@index');
+        // Route::post('upload','ImagesShoesController@store');
+
+        Route::post('image','ImagesShoesController@upload');
     });
 });
 
