@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Traits\ImageUpload;
+use Illuminate\Support\Str;
 
 use App\Image;
 
@@ -18,20 +19,22 @@ class ImagesShoesController extends Controller
     }
 
     public function upload(){
-        // use ImageUpload; //Using our created Trait to access inside trait method
-
        $this->request->validate([
           'image' => 'required'
         ]);
-        dd($this->request->image);
-        if ($request->hasFile('image')) {
-        foreach($request->file('image ') as $file){
-          $filePath = $this->UserImageUpload($file); //passing parameter to our trait method one after another using foreach loop
-            Image::create([
-              'image' => $filePath,
-            ]);
+        $id = $this->request->id_shoes;
+        if ($this->request->hasFile('image')) {
+          // xử lý lưu image ảnh lên database
+          foreach($this->request->file('image') as $file){
+            $image = new Image;
+            $image->id_shoes = $id;
+            $name= $file->getClientOriginalName();
+            $subImage=Str::random(4)."_".$name;
+            $file->move('upload',$subImage);
+            $image->url = $subImage;
+            $image->detail = "";
+            $image->save();
           }
-         Toastr::success('Image uploaded successfully :)','Success');
         }
         return redirect()->back();
     }

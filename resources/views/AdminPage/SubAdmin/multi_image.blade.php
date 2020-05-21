@@ -45,12 +45,12 @@
                 {{$id}}
             </div>
         </div>
-        {{-- <form action="image" method="post" enctype="multipart/form-data">
+        <!-- {{-- <form action="image" method="post" enctype="multipart/form-data">
             @csrf
         <input type="file" name="image[]" required="" multiple >
         <input type="submit" value="submit">
         </form> --}}
-        {{-- <div>{{$id_shoes}}</div> --}}
+        {{-- <div>{{$id_shoes}}</div> --}} -->
     </div> <!-- end container -->
 </div>
 @endsection
