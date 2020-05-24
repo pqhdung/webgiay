@@ -9,33 +9,29 @@
                 <a class="footer-logo" href="#"><img src="../../fontend/images/logo2.png" alt="Logo"></a>
                 <div class="widget-details">
                   <p class="description">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+                    Trường Đại Học Công Nghệ Sài Gòn - Khoa công nghệ thông tin
                   </p><!-- /.description -->
                   <address>
-                    121 King Street, Melbourne VIC 3000, Australia
+                    180 Đường Cao Lỗ, Phường 4, Quận 8, Hồ Chí Minh
                   </address>
-                  <span>+61 3 8376 6284</span>
-                  <span><a href="#">support@shopaholic.com</a></span>
+                  <span>028 3850 5520</span>
+                  {{-- <span><a href="#">http://stu.edu.vn/</a></span> --}}
                 </div><!-- /.widget-details -->
               </div><!-- /.widget -->
             </div>
 
-            <div class="col-md-2 col-sm-6">
+            <div class="col-md-8 col-sm-12">
               <div class="widget widget_useful_links">
-                <h4 class="widget-title">Useful links</h4>
+                <h4 class="widget-title">Nhóm 10</h4>
                 <div class="widget-details">
-                  <span><i class="ti-control-record"></i><a href="#">About us</a></span>
-                  <span><i class="ti-control-record"></i><a href="#">Customer service</a></span>
-                  <span><i class="ti-control-record"></i><a href="#">New Collection</a></span>
-                  <span><i class="ti-control-record"></i><a href="#">Best Sellers</a></span>
-                  <span><i class="ti-control-record"></i><a href="#">Manufacturers</a></span>
-                  <span><i class="ti-control-record"></i><a href="#">Privacy policy</a></span>
-                  <span><i class="ti-control-record"></i><a href="#">Terms & condition</a></span>
+                  <span><i class="ti-control-record"></i><a href="#">Phùng Quang Hoàng Dũng - DH51600594</a></span>
+                  <span><i class="ti-control-record"></i><a href="#">Nguyễn Công Minh - DH51600961 </a></span>
+                  <span><i class="ti-control-record"></i><a href="#">Lâm Tăng Bảo Long - DH51600935 </a></span>
                 </div><!-- /.widget-details -->
               </div><!-- /.widget -->
             </div>
 
-            <div class="col-md-2 col-sm-6">
+            {{-- <div class="col-md-2 col-sm-6">
               <div class="widget widget_shop_links">
                 <h4 class="widget-title">Shops</h4>
                 <div class="widget-details">
@@ -64,7 +60,7 @@
                   <a href="#"><img src="../../fontend/images/instagram/8.png" alt="Instagram Image"></a>
                 </div><!-- /.widget-details -->
               </div><!-- /.widget -->
-            </div>
+            </div> --}}
 
           </div>
         </div>

@@ -18,10 +18,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('category','ApiCategoryController@index');
+// Route::get('category','ApiCategoryController@index');
 
-Route::get('category/{id}','ApiCategoryController@CategoryById');
+// Route::get('category/{id}','ApiCategoryController@CategoryById');
 
-Route::post('category','ApiCategoryController@SaveCategory');
+// Route::post('category','ApiCategoryController@SaveCategory');
 
-Route::put('category/{category}', 'ApiCategoryController@UpdateCategory');
+// Route::put('category/{id}', 'ApiCategoryController@UpdateCategory');
+
+// Route::delete('category/{id}', 'ApiCategoryController@DeletedCategory');
+
+Route::apiResource('category','APIController');

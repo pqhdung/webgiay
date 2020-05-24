@@ -130,11 +130,11 @@
                     {{-- <div class="previous-price"><span class="currency">$</span><span class="price">79.00</span></div><!-- /.previous-price --> --}}
                   </div><!-- /.item-price -->
   
-                  <div class="cart-counter">
+                  {{-- <div class="cart-counter">
                     <button id="item-plus" class="item-plus"><i class="ti-plus"></i></button>
                     <span id="count" class="count">0</span>
                     <button id="item-minus" class="item-minus"><i class="ti-minus"></i></button>
-                  </div><!-- /.cart-counter -->
+                  </div><!-- /.cart-counter --> --}}
 
                 <select data-select-like-alignement="never" class="size drop-select">
                   <option value="">Size</option>
@@ -151,13 +151,13 @@
                 <div class="row1">
                   @foreach ($allShoes as $all)
                   <div class="column1">
-                    <a href="#"><img class="thumb1" src="../../upload/{{$all->images}}" alt=""></a>
+                    <a href="/product/{{$all->id}}/{{str_replace(" ","-",$all->name)}}"><img class="thumb1" src="../../upload/{{$all->images}}" alt=""></a>
                   </div>
                   @endforeach
                 </div>
                 <div class="clearfix"></div>
                 <div class="buttons">
-                  <button class="add-to-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
+                  <button class="add-to-cart"><a href="{{route('themvaogiohang',$shoes->id)}}">Add to cart<i class="fa fa-shopping-cart"></i></a></button>
                   <button class="wish-list"><i class="fa fa-heart"></i></button>
                 </div>
 
