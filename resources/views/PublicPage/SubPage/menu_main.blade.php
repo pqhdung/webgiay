@@ -35,6 +35,7 @@
       </li>
       @endforeach
       <li class="menu-item"><a href="/all-shoes">All Product</a></li> 
+      <li class="menu-item"><a href="/thanhvien.html">Thành Viên</a></li> 
 
     </ul><!-- /.navbar-nav -->
   </nav><!-- /.navbar-collapse -->

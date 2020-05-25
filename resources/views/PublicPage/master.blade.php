@@ -8,8 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 
-  <title>Shopaholic - e-Commerce HTML5 Template</title>
-  <meta name="description" content="Shopaholic - e-Commerce HTML5 Template">
+  <title>Shopaholic</title>
+  <meta name="description" content="Shopaholic">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
 

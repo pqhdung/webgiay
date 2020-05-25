@@ -105,18 +105,22 @@
 
         <div class="col-sm-12">
           <div class="item text-center">
-            <h2 class="item-no">07.</h2><!-- /.item-no -->
-            <h3 class="item-title">Blue sharkskin</h3><!-- /.item-title -->
+            <h2 class="item-no">Weather</h2><!-- /.item-no -->
+            <h3 class="item-title">{{$weather['name']}}</h3><!-- /.item-title -->
             <p class="description">
-              That afternoon I had been worrying my brokers about investments to give my mind something to work on, and on my way home
+            <span>Temp: {{$weather['main']['temp']}} &degC</span><br/>
+            <span>Feels Like: {{$weather['main']['feels_like']}} &degC</span><br/>
+            <span>Temp Max: {{$weather['main']['temp_max']}} &degC</span><br/>
+            <span>Temp Min: {{$weather['main']['temp_min']}} &degC</span>
+
             </p><!-- /.description -->
-            <div class="item-thumbnail">
+            {{-- <div class="item-thumbnail">
               <img class="img-responsive" src="fontend/images/home06/7.png" alt="Item Thumbnail">
               <img class="img-responsive" src="fontend/images/home06/8.png" alt="Item Thumbnail">
               <img class="img-responsive" src="fontend/images/home06/9.png" alt="Item Thumbnail">
-            </div><!-- /.item-thumbnail -->
-            <div class="item-price"><span class="currency">$</span><span class="price">454.00</span></div><!-- /.item-price -->
-            <a href="#" class="btn">Start shopping now</a><!-- /.btn -->
+            </div><!-- /.item-thumbnail --> --}}
+            {{-- <div class="item-price"><span class="currency">$</span><span class="price">454.00</span></div><!-- /.item-price -->
+            <a href="#" class="btn">Start shopping now</a><!-- /.btn --> --}}
           </div><!-- /.item -->
         </div>
       </div><!-- /.collection-middle -->

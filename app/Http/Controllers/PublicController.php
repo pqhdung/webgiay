@@ -19,14 +19,15 @@ class PublicController extends Controller
 
         // $client = new Client();
         // $request = $client->request('GET','http://api.openweathermap.org/data/2.5/weather?id=1566083&appid=85891f0163a9af053561b98a60f6713b');
-        $request = Http::get('http://api.openweathermap.org/data/2.5/weather?id=1566083&appid=85891f0163a9af053561b98a60f6713b');
+        $request = Http::get('http://api.openweathermap.org/data/2.5/weather?appid=874c33a3a61f941493eeb28bd14211e2&units=metric&q=ho%20chi%20minh%20city&fbclid=IwAR2yrP1J6R6FT2uYOXEeBWcXXRPPj-dLB_ET-WK0UsSw5roTYKRrAzWDsEU');
         // dd($request->json());
+        $weather = $request->json();
 
         $producer = Producer::select('id','name_producer')->get();
         $shoes    = Shoes::select('id','name','product','price','images')->orderBy('id','desc')->offset(0)->take(4)->get();
         $shoes2    = Shoes::select('id','name','product','price','images')->orderBy('id','desc')->offset(4)->take(2)->get();
         $shoes3    = Shoes::select('id','name','product','price','images')->orderBy('id','desc')->offset(6)->take(3)->get();
-        return view('PublicPage.SubPage.contents',['producer'=>$producer,'shoes'=>$shoes,'shoes2'=>$shoes2,'shoes3'=>$shoes3, 'request' => $request]);
+        return view('PublicPage.SubPage.contents',['producer'=>$producer,'shoes'=>$shoes,'shoes2'=>$shoes2,'shoes3'=>$shoes3, 'weather' => $weather]);
     }
 
     public function getAllShoes(){
