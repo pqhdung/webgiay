@@ -70,6 +70,12 @@ Route::get('all-shoes','PublicController@getAllShoes');
 Route::get('add-to-cart/{id}','CartController@getAddToCart')->name('themvaogiohang');
 
 
+//trang checkout
+//Route::get('/checkout','CartController@checkoutIndex');
+Route::get('/checkout',['as'=>'getcheckout','uses'=>'CartController@yourOrder']);
+Route::post('/checkout',['as'=>'postcheckout','uses'=>'CartController@checkoutForm']);
+
+
 //route show giỏ hàng
 Route::get('show-cart','CartController@ShowAllCart')->name('gio-hang');
 
@@ -82,7 +88,6 @@ Route::get('producer/{id}/{name}', 'PublicController@getProducer');
 //show chi tiết sản phẩm
 Route::get('product/{id}/{name}','PublicController@getProductDetail');
 
-<<<<<<< HEAD
 //Cập nhật giỏ hàng
 Route::get('update-to-cart/{id}/{Qty}','CartController@getUpdatetocart');
 
@@ -90,9 +95,4 @@ Route::get('update-to-cart/{id}/{Qty}','CartController@getUpdatetocart');
 Route::get('/login', ['as' => 'getlogin', 'uses' => 'UserController@index']);
 Route::post('/register', ['as' => 'postregister', 'uses' => 'UserController@postUserRegister']);
 Route::post('/login', ['as' => 'postlogin', 'uses' => 'UserController@userpostLogin']);
-=======
-//đăng ký / đăng nhập user
-Auth::routes();
-
-Route::get('/registerlogin', 'HomeController@showRegisterLogin')->name('login');
->>>>>>> 872cdde7803ef38ff5b4fdd86bc70b3031cafee2
+Route::get('/logout', [ 'as' => 'getlogout', 'uses' => 'UserController@getLogout']);

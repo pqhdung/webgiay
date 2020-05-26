@@ -19,4 +19,5 @@ class Orders extends Model
     public function saler(){
         return $this->belongsTo('App\Saler','id_saler','id');
     }//relaytionship 1-n saler - order
+    public $timestamps = false;
 }
