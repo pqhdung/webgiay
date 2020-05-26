@@ -114,9 +114,12 @@ class DashboardController extends Controller
         $shoes->inventory               = $this->request->inventory;
         $shoes->price                   = $this->request->price;
         $shoes->save();
+        $id = $shoes->id;
 
 
-        return redirect('/admins')->with('mess','Thêm thành công.');
+        // return redirect('/admins')->with('mess','Thêm thành công.');
+
+        return view('AdminPage.SubAdmin.multi_image',['id'=>$id])->with('mess','Thêm thành công.');
     }
 
     public function ShowAllShoes()

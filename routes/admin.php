@@ -12,7 +12,7 @@ Route::group(['middleware' => 'checkAdminLogin', 'prefix' => '/'], function() {
     });
     Route::group(["prefix"=>"shoes"],function(){
         Route::get('add-shoes','DashboardController@AddShoes');
-        Route::post('add-shoes','DashboardController@postAddShoes');
+        Route::post('add-shoes','DashboardController@postAddShoes')->name('all_shoes');
         Route::get('all-shoes','DashboardController@ShowAllShoes');
 
         Route::get('upload/{id}','ImagesShoesController@index');

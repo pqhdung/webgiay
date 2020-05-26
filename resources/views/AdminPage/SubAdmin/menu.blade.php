@@ -34,7 +34,7 @@
                         </a>
                         <!-- End mobile menu toggle-->
                     </li>
-                    <li class="dropdown notification-list hide-phone">
+                    {{-- <li class="dropdown notification-list hide-phone">
                         <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button"
                            aria-haspopup="false" aria-expanded="false">
                             <i class="mdi mdi-earth"></i> English  <i class="mdi mdi-chevron-down"></i>
@@ -62,8 +62,8 @@
                             </a>
 
                         </div>
-                    </li>
-
+                    </li> --}}
+{{-- 
                     <li class="dropdown notification-list">
                         <a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#" role="button"
                            aria-haspopup="false" aria-expanded="false">
@@ -121,9 +121,9 @@
                             </a>
 
                         </div>
-                    </li>
+                    </li> --}}
 
-                    <li class="dropdown notification-list">
+                    {{-- <li class="dropdown notification-list">
                         <a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#" role="button"
                            aria-haspopup="false" aria-expanded="false">
                             <i class="fi-speech-bubble noti-icon"></i>
@@ -179,7 +179,7 @@
                             </a>
 
                         </div>
-                    </li>
+                    </li> --}}
 
                     <li class="dropdown notification-list">
                         <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button"
@@ -208,12 +208,12 @@
                             </a>
 
                             <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <a href="admins/logout" class="dropdown-item notify-item">
                                 <i class="fi-lock"></i> <span>Lock Screen</span>
                             </a>
 
                             <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <a href="admins/logout" class="dropdown-item notify-item">
                                 <i class="fi-power"></i> <span>Logout</span>
                             </a>
 

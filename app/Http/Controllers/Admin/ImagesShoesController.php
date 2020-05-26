@@ -36,7 +36,7 @@ class ImagesShoesController extends Controller
             $image->save();
           }
         }
-        return redirect()->back();
+        return redirect()->route('all_shoes');
     }
 
 }
