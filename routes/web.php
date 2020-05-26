@@ -70,6 +70,12 @@ Route::get('all-shoes','PublicController@getAllShoes');
 Route::get('add-to-cart/{id}','CartController@getAddToCart')->name('themvaogiohang');
 
 
+//trang checkout
+//Route::get('/checkout','CartController@checkoutIndex');
+Route::get('/checkout',['as'=>'getcheckout','uses'=>'CartController@yourOrder']);
+Route::post('/checkout',['as'=>'postcheckout','uses'=>'CartController@checkoutForm']);
+
+
 //route show giỏ hàng
 Route::get('show-cart','CartController@ShowAllCart')->name('gio-hang');
 
@@ -89,3 +95,4 @@ Route::get('update-to-cart/{id}/{Qty}','CartController@getUpdatetocart');
 Route::get('/login', ['as' => 'getlogin', 'uses' => 'UserController@index']);
 Route::post('/register', ['as' => 'postregister', 'uses' => 'UserController@postUserRegister']);
 Route::post('/login', ['as' => 'postlogin', 'uses' => 'UserController@userpostLogin']);
+Route::get('/logout', [ 'as' => 'getlogout', 'uses' => 'UserController@getLogout']);

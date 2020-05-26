@@ -12,6 +12,9 @@
     object-fit: cover;
 }
 </style>
+
+<link rel="stylesheet" href="../../fontend/assets/css/shop/cart.css">
+
 <section class="page-name-sec page-name-sec-01">
     <div class="section-padding">
       <div class="container">
@@ -90,7 +93,7 @@
           <div class="cart-buttons">
             <button class="clear-cart">Clear shopping cart</button>
             <button class="update-cart">Update shopping cart</button>
-            <button class="continue pull-right">Continue shopping</button>
+            <button class="continue pull-right"><a href="/checkout">Continue shopping</a></button>
           </div><!-- /.cart-buttons -->
         </div><!-- /.per-order-items -->
 

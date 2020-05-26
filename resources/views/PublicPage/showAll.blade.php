@@ -22,11 +22,14 @@
   <link rel="stylesheet" href="../../fontend/assets/css/magnific-popup.css"> 
   <link rel="stylesheet" href="../../fontend/assets/css/style.css">
   <link rel="stylesheet" href="../../fontend/assets/css/themes.css">
+
   <link rel="stylesheet" href="../../fontend/assets/css/pages/portfolio.css">
-  <link rel="stylesheet" href="../../fontend/assets/css/shop/shop.css">
-  <link rel="stylesheet" href="../../fontend/assets/css/shop/cart.css">
-  <link rel="stylesheet" href="../../fontend/assets/css/shop/shop-details.css">
   <link rel="stylesheet" href="../../fontend/assets/css/pages/register.css">
+
+  
+  <link rel="stylesheet" href="../../fontend/assets/css/shop/shop.css">
+  <link rel="stylesheet" href="../../fontend/assets/css/shop/shop-details.css">
+
   <!--[if lte IE 7]><script src="lte-ie7.js"></script><![endif]-->
   <!--[if lt IE 9]><script src="../../fontend/assets/js/vendor/html5-3.6-respond-1.4.2.min.js"></script><![endif]-->
 

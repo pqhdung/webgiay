@@ -15,4 +15,5 @@ class OrderDetail extends Model
     public function orders(){
         return $this->belongsTo('App\Orders','id_orders','id');
     }//relaytionship 1-n order - order detail
+    public $timestamps = false;
 }

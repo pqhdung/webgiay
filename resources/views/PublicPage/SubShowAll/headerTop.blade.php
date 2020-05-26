@@ -35,13 +35,21 @@
             <span><i class="ti-heart"></i></span>
           </div>
 
-          <div class="checkout"><a href="checkout.html">Checkout <i class="ti-check-box"></i></a></div><!-- /.checkout -->
+          <div class="checkout"><a href="/checkout">Checkout <i class="ti-check-box"></i></a></div><!-- /.checkout -->
 
           <div class="my-account dropdown">
-            <a href="#">My Account<i class="ti-user"></i></a>
-            <ul class="unsorted-list">
+            @if(Auth::check())
+              <a href="#">{{Auth::user()->name}}<i class="ti-user"></i></a>
+              <ul class="unsorted-list">
+              <li><a href ="/logout">Log out</a></li>
+              
+            @else
+              <a href="#">My Account<i class="ti-user"></i></a>
+              <ul class="unsorted-list">
               <li><a href="/login">Log In</a></li>
-              <li><a href="#">My Profile</a></li>
+              
+            @endif
+            <li><a href="#">My Profile</a></li>
               <li><a href="#">My Wishlist</a></li>
               <li><a href="cart.html">My Cart</a></li>
               <li><a href="checkout.html">Checkout</a></li>

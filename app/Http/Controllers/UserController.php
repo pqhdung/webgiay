@@ -73,17 +73,6 @@ class UserController extends Controller
         $user ->save();
         return redirect('/login')->with('message','Đăng ký thành công.');
     }
-    /*
-    public function usergetLogin()
-    {
-        if (Auth::check()) {
-            // nếu đăng nhập thàng công thì 
-            return redirect('/admins');
-        } else {
-            return view('PublicPage.SubShowAll.login');
-        }
-    }
-    */
     public function userpostLogin()
     {
         $login = [
@@ -94,9 +83,14 @@ class UserController extends Controller
         ];
         
         if (Auth::attempt($login)) {
-            return redirect('/');
+            return redirect()->back()->with('status','Đăng nhập thành công');
         } else {
             return redirect()->back()->with('status', 'Email hoặc Password không chính xác');
         }
     }
+
+    public function getLogout() {
+		Auth::logout();
+		return redirect('login');
+	}
 }
